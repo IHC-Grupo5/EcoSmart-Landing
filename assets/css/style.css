@@ -312,7 +312,7 @@ ul {
   align-items: flex-end;
   height: 83dvh;
   padding: 0;
-  background-image: url("/images/hero-bg-prime.png");
+  background-image: url("../images/hero-bg-prime.png");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
