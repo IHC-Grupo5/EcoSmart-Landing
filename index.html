@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoSmart | Reciclaje Inteligente</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner container">
+      <a href="#" class="navbar__logo">
+        <img src="images/logoEcosmart_dark.png" alt="EcoSmart logo" class="navbar__logo-img" />
+      </a>
+      <nav class="navbar__nav" id="navLinks" aria-label="Navegación principal">
+        <ul class="navbar__list">
+          <li><a href="#como-funciona" class="navbar__link">Cómo funciona</a></li>
+          <li><a href="#caracteristicas" class="navbar__link">Características</a></li>
+          <li><a href="#para-quien" class="navbar__link">¿Para quién?</a></li>
+          <li><a href="#descargar" class="navbar__link">Descargar</a></li>
+        </ul>
+      </nav>
+      <div class="navbar__actions">
+        <a href="#" class="btn btn--login">Iniciar sesión</a>
+        <a href="#" class="btn btn--register">Registrarse</a>
+      </div>
+      <button class="navbar__hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="navbar__mobile-menu" id="mobileMenu" aria-hidden="true">
+      <ul class="navbar__mobile-list">
+        <li><a href="#como-funciona" class="navbar__mobile-link">Cómo funciona</a></li>
+        <li><a href="#caracteristicas" class="navbar__mobile-link">Características</a></li>
+        <li><a href="#para-quien" class="navbar__mobile-link">¿Para quién?</a></li>
+        <li><a href="#descargar" class="navbar__mobile-link">Descargar</a></li>
+      </ul>
+      <div class="navbar__mobile-actions">
+        <a href="#" class="btn btn--login btn--full">Iniciar sesión</a>
+        <a href="#" class="btn btn--register btn--full">Registrarse</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="seccion-hero" id="seccion-hero">
+    <div class="seccion-hero__inner container">
+      <div class="seccion-hero__content">
+        <p class="seccion-hero__label">Plataforma de reciclaje inteligente</p>
+        <h1 class="seccion-hero__title">
+          Recicla mejor.<br class="d-none-mobile" />
+          Gana recompensas.<br class="d-none-mobile" />
+          Cuida el planeta.
+        </h1>
+        <p class="seccion-hero__subtitle">
+          EcoSmart clasifica tus residuos con inteligencia artificial,
+          conecta con contenedores IoT en tu distrito y te premia por
+          cada acción sostenible.
+        </p>
+        <div class="seccion-hero__cta">
+          <a href="#" class="btn btn--primary">Empieza gratis</a>
+          <a href="#como-funciona" class="btn btn--ghost">Ver cómo funciona</a>
+        </div>
+      </div>
+      <div class="seccion-hero__image-wrapper">
+        <img src="images/image-hero.png" alt="EcoSmart" class="seccion-hero__image" />
+      </div>
+    </div>
+  </section>
+  <hr class="separacion"/>
+  <section class="seccion-pasos" id="como-funciona">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><strong>Reciclar nunca fue tan fácil</strong></h2>
+        <p class="section-sub">
+          En <b>4 pasos</b> conviertes tus residuos en puntos y<br class="d-none-mobile" />
+          tu esfuerzo en un impacto ambiental real.
+        </p>
+      </div>
+      <div class="seccion-pasos__grid">
+        <div class="paso-card">
+          <div class="paso-card__header">
+            <span class="num">1</span>
+            <img src="images/Paso1.png" alt="Fotografiar el residuo" class="paso-card__img" />
+          </div>
+          <h3 class="paso-card__title">Fotografía el residuo</h3>
+          <p class="paso-card__desc">
+            Toma una foto del material y nuestra
+            IA lo clasifica al instante en la categoría correcta.
+          </p>
+        </div>
+        <div class="paso-card">
+          <div class="paso-card__header">
+            <span class="num">2</span>
+            <img src="images/Paso2.png" alt="Mapa de contenedores" class="paso-card__img" />
+          </div>
+          <h3 class="paso-card__title">Encuentra el contenedor</h3>
+          <p class="paso-card__desc">
+            El mapa te muestra el contenedor
+            inteligente más cercano con capacidad disponible.
+          </p>
+        </div>
+        <div class="paso-card">
+          <div class="paso-card__header">
+            <span class="num">3</span>
+            <img src="images/Paso3.png" alt="Depositar y escanear QR" class="paso-card__img" />
+          </div>
+          <h3 class="paso-card__title">Deposita y escanea</h3>
+          <p class="paso-card__desc">
+            Deposita el residuo y escanea el QR
+            del contenedor para registrar tu
+            actividad automáticamente.
+          </p>
+        </div>
+        <div class="paso-card">
+          <div class="paso-card__header">
+            <span class="num">4</span>
+            <img src="images/Paso4.jpg" alt="Ganar EcoCoins" class="paso-card__img" />
+          </div>
+          <h3 class="paso-card__title">Gana EcoCoins</h3>
+          <p class="paso-card__desc">
+            Acumula puntos por cada acción y
+            canjéalos por descuentos en
+            comercios aliados.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="seccion-features" id="caracteristicas">
+    <div class="container">
+      <div class="section-header section-header--light">
+        <h2 class="section-title section-title--light">
+          <strong>Todo lo que necesitas para reciclar mejor</strong>
+        </h2>
+        <p class="section-sub section-sub--light">
+          Una plataforma completa que conecta<br class="d-none-mobile" />
+          ciudadanos, municipalidades y recicladores en<br class="d-none-mobile" />
+          un solo ecosistema.
+        </p>
+      </div>
+      <div class="seccion-features__grid">
+        <div class="feat-card">
+          <div class="feat-card__icon">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+              <title>ai</title>
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="invisible_box" data-name="invisible box">
+                  <rect width="48" height="48" fill="none" />
+                </g>
+                <g id="Q3_icons" data-name="Q3 icons">
+                  <g>
+                    <path
+                      d="M45.6,18.7,41,14.9V7.5a1,1,0,0,0-.6-.9L30.5,2.1h-.4l-.6.2L24,5.9,18.5,2.2,17.9,2h-.4L7.6,6.6a1,1,0,0,0-.6.9v7.4L2.4,18.7a.8.8,0,0,0-.4.8v9H2a.8.8,0,0,0,.4.8L7,33.1v7.4a1,1,0,0,0,.6.9l9.9,4.5h.4l.6-.2L24,42.1l5.5,3.7.6.2h.4l9.9-4.5a1,1,0,0,0,.6-.9V33.1l4.6-3.8a.8.8,0,0,0,.4-.7V19.4h0A.8.8,0,0,0,45.6,18.7Zm-5.1,6.8H42v1.6l-3.5,2.8-.4.3-.4-.2a1.4,1.4,0,0,0-2,.7,1.5,1.5,0,0,0,.6,2l.7.3h0v5.4l-6.6,3.1-4.2-2.8-.7-.5V25.5H27a1.5,1.5,0,0,0,0-3H25.5V9.7l.7-.5,4.2-2.8L37,9.5v5.4h0l-.7.3a1.5,1.5,0,0,0-.6,2,1.4,1.4,0,0,0,1.3.9l.7-.2.4-.2.4.3L42,20.9v1.6H40.5a1.5,1.5,0,0,0,0,3ZM21,25.5h1.5V38.3l-.7.5-4.2,2.8L11,38.5V33.1h0l.7-.3a1.5,1.5,0,0,0,.6-2,1.4,1.4,0,0,0-2-.7l-.4.2-.4-.3L6,27.1V25.5H7.5a1.5,1.5,0,0,0,0-3H6V20.9l3.5-2.8.4-.3.4.2.7.2a1.4,1.4,0,0,0,1.3-.9,1.5,1.5,0,0,0-.6-2L11,15h0V9.5l6.6-3.1,4.2,2.8.7.5V22.5H21a1.5,1.5,0,0,0,0,3Z" />
+                    <path
+                      d="M13.9,9.9a1.8,1.8,0,0,0,0,2.2l2.6,2.5v2.8l-4,4v5.2l4,4v2.8l-2.6,2.5a1.8,1.8,0,0,0,0,2.2,1.5,1.5,0,0,0,1.1.4,1.5,1.5,0,0,0,1.1-.4l3.4-3.5V29.4l-4-4V22.6l4-4V13.4L16.1,9.9A1.8,1.8,0,0,0,13.9,9.9Z" />
+                    <path
+                      d="M31.5,14.6l2.6-2.5a1.8,1.8,0,0,0,0-2.2,1.8,1.8,0,0,0-2.2,0l-3.4,3.5v5.2l4,4v2.8l-4,4v5.2l3.4,3.5a1.7,1.7,0,0,0,2.2,0,1.8,1.8,0,0,0,0-2.2l-2.6-2.5V30.6l4-4V21.4l-4-4Z" />
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <h3 class="feat-card__title">Clasificación con IA</h3>
+          <p class="feat-card__desc">
+            Identifica plásticos, vidrios, papel, orgánicos y
+            residuos peligrosos con una sola foto. Precisión
+            superior al 90%.
+          </p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 640 640">
+              <path
+                d="M576 112C576 103.7 571.7 96 564.7 91.6C557.7 87.2 548.8 86.8 541.4 90.5L416.5 152.1L244 93.4C230.3 88.7 215.3 89.6 202.1 95.7L77.8 154.3C69.4 158.2 64 166.7 64 176L64 528C64 536.2 68.2 543.9 75.1 548.3C82 552.7 90.7 553.2 98.2 549.7L225.5 489.8L396.2 546.7C409.9 551.3 424.7 550.4 437.8 544.2L562.2 485.7C570.6 481.7 576 473.3 576 464L576 112zM208 146.1L208 445.1L112 490.3L112 191.3L208 146.1zM256 449.4L256 148.3L384 191.8L384 492.1L256 449.4zM432 198L528 150.6L528 448.8L432 494L432 198z" />
+            </svg>
+          </div>
+          <h3 class="feat-card__title">Mapa de contenedores IoT</h3>
+          <p class="feat-card__desc">
+            Visualiza en tiempo real el nivel de llenado y
+            la ubicación de los contenedores inteligentes más
+            cercanos.
+          </p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="#fff">
+              <path
+                d="M385.5 132.8C393.1 119.9 406.9 112 421.8 112L424 112C446.1 112 464 129.9 464 152C464 174.1 446.1 192 424 192L350.7 192L385.5 132.8zM254.5 132.8L289.3 192L216 192C193.9 192 176 174.1 176 152C176 129.9 193.9 112 216 112L218.2 112C233.1 112 247 119.9 254.5 132.8zM344.1 108.5L320 149.5L295.9 108.5C279.7 80.9 250.1 64 218.2 64L216 64C167.4 64 128 103.4 128 152C128 166.4 131.5 180 137.6 192L96 192C78.3 192 64 206.3 64 224L64 256C64 273.7 78.3 288 96 288L544 288C561.7 288 576 273.7 576 256L576 224C576 206.3 561.7 192 544 192L502.4 192C508.5 180 512 166.4 512 152C512 103.4 472.6 64 424 64L421.8 64C389.9 64 360.3 80.9 344.1 108.4zM544 336L344 336L344 544L480 544C515.3 544 544 515.3 544 480L544 336zM296 336L96 336L96 480C96 515.3 124.7 544 160 544L296 544L296 336z" />
+            </svg>
+          </div>
+          <h3 class="feat-card__title">Recompensas EcoCoins</h3>
+          <p class="feat-card__desc">
+            Gana puntos por cada clasificación y depósito.
+            Canjéalos por beneficios reales en comercios
+            aliados.
+          </p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 640 640">
+              <path
+                d="M335.9 84.2C326.1 78.6 314 78.6 304.1 84.2L80.1 212.2C67.5 219.4 61.3 234.2 65 248.2C68.7 262.2 81.5 272 96 272L128 272L128 480L128 480L76.8 518.4C68.7 524.4 64 533.9 64 544C64 561.7 78.3 576 96 576L544 576C561.7 576 576 561.7 576 544C576 533.9 571.3 524.4 563.2 518.4L512 480L512 272L544 272C558.5 272 571.2 262.2 574.9 248.2C578.6 234.2 572.4 219.4 559.8 212.2L335.8 84.2zM464 272L464 480L400 480L400 272L464 272zM352 272L352 480L288 480L288 272L352 272zM240 272L240 480L176 480L176 272L240 272zM320 160C337.7 160 352 174.3 352 192C352 209.7 337.7 224 320 224C302.3 224 288 209.7 288 192C288 174.3 302.3 160 320 160z" />
+            </svg>
+          </div>
+          <h3 class="feat-card__title">Panel municipal</h3>
+          <p class="feat-card__desc">
+            Reportes analíticos, gestión de rutas optimizadas
+            y monitoreo de contenedores para
+            administradores.
+          </p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 640 640">
+              <path
+                d="M216.3 124C262.5 44 378 44 424.2 124L461.5 188.6L489.2 172.6C497.6 167.7 508.1 168.4 515.8 174.3C523.5 180.2 526.9 190.2 524.4 199.6L500.9 287C497.5 299.8 484.3 307.4 471.5 304L384.1 280.6C374.7 278.1 367.8 270.2 366.5 260.6C365.2 251 369.9 241.5 378.3 236.7L406 220.7L368.7 156.1C347.1 118.8 293.3 118.8 271.7 156.1L266.4 165.2C257.6 180.5 238 185.7 222.7 176.9C207.4 168.1 202.2 148.5 211 133.1L216.3 124zM513.7 343.1C529 334.3 548.6 339.5 557.4 354.8L562.7 363.9C608.9 443.9 551.2 543.9 458.8 543.9L384.2 543.9L384.2 575.9C384.2 585.6 378.4 594.4 369.4 598.1C360.4 601.8 350.1 599.8 343.2 592.9L279.2 528.9C269.8 519.5 269.8 504.3 279.2 495L343.2 431C350.1 424.1 360.4 422.1 369.4 425.8C378.4 429.5 384.2 438.3 384.2 448L384.2 480L458.8 480C501.9 480 528.9 433.3 507.3 396L502 386.9C493.2 371.6 498.4 352 513.7 343.2zM115 299.4L87.3 283.4C78.9 278.5 74.2 269.1 75.5 259.5C76.8 249.9 83.7 242 93.1 239.5L180.5 216C193.3 212.6 206.5 220.2 209.9 233L233.3 320.4C235.8 329.8 232.4 339.7 224.7 345.7C217 351.7 206.5 352.3 198.1 347.4L170.4 331.4L133.1 396C111.5 433.3 138.5 480 181.6 480L192.2 480C209.9 480 224.2 494.3 224.2 512C224.2 529.7 209.9 544 192.2 544L181.6 544C89.3 544 31.6 444 77.8 364L115 299.4z" />
+            </svg>
+          </div>
+          <h3 class="feat-card__title">Módulo recicladores</h3>
+          <p class="feat-card__desc">
+            Conecta a los recicladores urbanos con puntos de
+            acopio activos y optimiza sus rutas de
+            recolección.
+          </p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 640 640">
+              <path
+                d="M96 96C113.7 96 128 110.3 128 128L128 464C128 472.8 135.2 480 144 480L544 480C561.7 480 576 494.3 576 512C576 529.7 561.7 544 544 544L144 544C99.8 544 64 508.2 64 464L64 128C64 110.3 78.3 96 96 96zM208 288C225.7 288 240 302.3 240 320L240 384C240 401.7 225.7 416 208 416C190.3 416 176 401.7 176 384L176 320C176 302.3 190.3 288 208 288zM352 224L352 384C352 401.7 337.7 416 320 416C302.3 416 288 401.7 288 384L288 224C288 206.3 302.3 192 320 192C337.7 192 352 206.3 352 224zM432 256C449.7 256 464 270.3 464 288L464 384C464 401.7 449.7 416 432 416C414.3 416 400 401.7 400 384L400 288C400 270.3 414.3 256 432 256zM576 160L576 384C576 401.7 561.7 416 544 416C526.3 416 512 401.7 512 384L512 160C512 142.3 526.3 128 544 128C561.7 128 576 142.3 576 160z" />
+            </svg>
+          </div>
+          <h3 class="feat-card__title">Impacto ambiental personal</h3>
+          <p class="feat-card__desc">
+            Visualiza cuántos kg reciclaste, CO₂
+            evitado y árboles equivalentes.
+            Comparte tu logro en redes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="seccion-segmentos" id="para-quien">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><strong> Diseñado para toda la comunidad</strong></h2>
+        <p class="section-sub">
+          EcoSmart está pensado para los tres actores<br class="d-none-mobile" />
+          clave del ecosistema de reciclaje urbano.
+        </p>
+      </div>
+      <div class="seccion-segmentos__grid">
+        <div class="seg-card">
+          <div class="seg-card__header">
+            <span class="seg-card__tag">CIUDADANOS</span>
+            <h3 class="seg-card__title">Hogares y vecinos</h3>
+          </div>
+          <div class="seg-card__body">
+            <p class="seg-card__desc">
+              Aprende a clasificar tus residuos, encuentra
+              puntos de acopio cercanas y gana
+              recompensas por tus hábitos sostenibles.
+            </p>
+            <ul class="seg-card__list">
+              <li>Clasificación de residuos con IA</li>
+              <li>Puntos y recompensas canjeables</li>
+              <li>Historial de impacto personal</li>
+              <li>Guías educativas y quizzes</li>
+            </ul>
+          </div>
+        </div>
+        <div class="seg-card  seg-card--dark">
+          <div class="seg-card__header">
+            <span class="seg-card__tag">INSTITUCIONES</span>
+            <h3 class="seg-card__title">Socios estratégicos</h3>
+          </div>
+          <div class="seg-card__body">
+            <p class="seg-card__desc">
+              Gestiona la infraestructura IoT, obtén datos
+              analíticos de tu distrito y optimiza las rutas de
+              recolección de tu equipo.
+            </p>
+            <ul class="seg-card__list">
+              <li>Dashboard de contenedores en tiempo real</li>
+              <li>Reportes por zona y período</li>
+              <li>Optimización de rutas</li>
+              <li>Estadísticas ciudadanas agregadas</li>
+            </ul>
+          </div>
+        </div>
+        <div class="seg-card">
+          <div class="seg-card__header">
+            <span class="seg-card__tag">RECICLADORES</span>
+            <h3 class="seg-card__title">Recicladores urbanos</h3>
+          </div>
+          <div class="seg-card__body">
+            <p class="seg-card__desc">
+              Crea tu perfil, visualiza los puntos de acopio
+              disponibles cerca de tu zona y registra tu
+              actividad diaria de recolección.
+            </p>
+            <ul class="seg-card__list">
+              <li>Mapa de residuos disponibles</li>
+              <li>Alertas por zona de operación</li>
+              <li>Registro de recolecciones</li>
+              <li>Coordinación con ciudadanos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="seccion-descarga" id="descargar">
+    <div class="container">
+      <div class="seccion-descarga__inner">
+        <div class="seccion-descarga__content">
+          <p class="seccion-descarga__label">Descarga la app</p>
+          <h2 class="seccion-descarga__title">
+            EcoSmart en tu bolsillo,<br class="d-none-mobile" />
+            siempre contigo.
+          </h2>
+          <p class="seccion-descarga__desc">
+            Disponible para Android e iOS. Escanea, deposita y gana
+            recompensas desde cualquier lugar de tu distrito.
+          </p>
+          <div class="seccion-descarga__store-btns">
+            <a href="https://play.google.com/" class="store-btn">
+              <img src="images/icon-playstore.png" alt="Google Play" class="store-btn__icon" />
+              <div class="store-btn__text">
+                <span class="store-btn__small">Disponible en</span>
+                <span class="store-btn__big">Google Play</span>
+              </div>
+            </a>
+            <a href="https://apps.apple.com/" class="store-btn">
+              <img src="images/icon-appstore.png" alt="App Store" class="store-btn__icon" />
+              <div class="store-btn__text">
+                <span class="store-btn__small">Disponible en</span>
+                <span class="store-btn__big">App Store</span>
+              </div>
+            </a>
+          </div>
+          <p class="seccion-descarga__note">También disponible como plataforma web. Sin instalación.</p>
+        </div>
+        <div class="seccion-descarga__phone">
+          <img src="images/phone-mockup 1.png" alt="App EcoSmart en móvil" class="seccion-descarga__phone-img" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="images/logoEcosmart_dark.png" alt="EcoSmart logo">
+          <p class=" footer__brand-desc">
+          Plataforma de gestión inteligente de residuos sólidos.
+          Conectamos ciudadanos, municipalidades y
+          recicladores para construir ciudades más
+          sostenibles.
+          </p>
+          <div class="footer__social">
+            <a href="https://x.com/" class="footer__social-link" aria-label="X-(twitter)">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="#fff">
+                <path
+                  d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/" class="footer__social-link" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="#fff">
+                <path
+                  d="M240 363.3L240 576L356 576L356 363.3L442.5 363.3L460.5 265.5L356 265.5L356 230.9C356 179.2 376.3 159.4 428.7 159.4C445 159.4 458.1 159.8 465.7 160.6L465.7 71.9C451.4 68 416.4 64 396.2 64C289.3 64 240 114.5 240 223.4L240 265.5L174 265.5L174 363.3L240 363.3z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/" class="footer__social-link" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="#fff">
+                <path
+                  d="M320.3 205C256.8 204.8 205.2 256.2 205 319.7C204.8 383.2 256.2 434.8 319.7 435C383.2 435.2 434.8 383.8 435 320.3C435.2 256.8 383.8 205.2 320.3 205zM319.7 245.4C360.9 245.2 394.4 278.5 394.6 319.7C394.8 360.9 361.5 394.4 320.3 394.6C279.1 394.8 245.6 361.5 245.4 320.3C245.2 279.1 278.5 245.6 319.7 245.4zM413.1 200.3C413.1 185.5 425.1 173.5 439.9 173.5C454.7 173.5 466.7 185.5 466.7 200.3C466.7 215.1 454.7 227.1 439.9 227.1C425.1 227.1 413.1 215.1 413.1 200.3zM542.8 227.5C541.1 191.6 532.9 159.8 506.6 133.6C480.4 107.4 448.6 99.2 412.7 97.4C375.7 95.3 264.8 95.3 227.8 97.4C192 99.1 160.2 107.3 133.9 133.5C107.6 159.7 99.5 191.5 97.7 227.4C95.6 264.4 95.6 375.3 97.7 412.3C99.4 448.2 107.6 480 133.9 506.2C160.2 532.4 191.9 540.6 227.8 542.4C264.8 544.5 375.7 544.5 412.7 542.4C448.6 540.7 480.4 532.5 506.6 506.2C532.8 480 541 448.2 542.8 412.3C544.9 375.3 544.9 264.5 542.8 227.5zM495 452C487.2 471.6 472.1 486.7 452.4 494.6C422.9 506.3 352.9 503.6 320.3 503.6C287.7 503.6 217.6 506.2 188.2 494.6C168.6 486.8 153.5 471.7 145.6 452C133.9 422.5 136.6 352.5 136.6 319.9C136.6 287.3 134 217.2 145.6 187.8C153.4 168.2 168.5 153.1 188.2 145.2C217.7 133.5 287.7 136.2 320.3 136.2C352.9 136.2 423 133.6 452.4 145.2C472 153 487.1 168.1 495 187.8C506.7 217.3 504 287.3 504 319.9C504 352.5 506.7 422.6 495 452z" />
+              </svg>
+            </a>
+            <a href="https://tiktok.com/" class="footer__social-link" aria-label="Tik Tok">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="#fff">
+                <path
+                  d="M544.5 273.9C500.5 274 457.5 260.3 421.7 234.7L421.7 413.4C421.7 446.5 411.6 478.8 392.7 506C373.8 533.2 347.1 554 316.1 565.6C285.1 577.2 251.3 579.1 219.2 570.9C187.1 562.7 158.3 545 136.5 520.1C114.7 495.2 101.2 464.1 97.5 431.2C93.8 398.3 100.4 365.1 116.1 336C131.8 306.9 156.1 283.3 185.7 268.3C215.3 253.3 248.6 247.8 281.4 252.3L281.4 342.2C266.4 337.5 250.3 337.6 235.4 342.6C220.5 347.6 207.5 357.2 198.4 369.9C189.3 382.6 184.4 398 184.5 413.8C184.6 429.6 189.7 444.8 199 457.5C208.3 470.2 221.4 479.6 236.4 484.4C251.4 489.2 267.5 489.2 282.4 484.3C297.3 479.4 310.4 469.9 319.6 457.2C328.8 444.5 333.8 429.1 333.8 413.4L333.8 64L421.8 64C421.7 71.4 422.4 78.9 423.7 86.2C426.8 102.5 433.1 118.1 442.4 131.9C451.7 145.7 463.7 157.5 477.6 166.5C497.5 179.6 520.8 186.6 544.6 186.6L544.6 274z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">PLATAFORMA</h4>
+          <ul class="footer__col-list">
+            <li><a href="#como-funciona">Cómo funciona</a></li>
+            <li><a href="#caracteristicas">Características</a></li>
+            <li><a href="#para-quien">Para municipalidades</a></li>
+            <li><a href="#para-quien">Para recicladores</a></li>
+            <li><a href="#descargar">Descargar app</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">EMPRESA</h4>
+          <ul class="footer__col-list">
+            <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="#">Misión y visión</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Aliados</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">LEGAL</h4>
+          <ul class="footer__col-list">
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Accesibilidad</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2026 EcoSmart. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
