@@ -166,6 +166,15 @@ ul {
 .btn--ghost:hover {
   background-color: rgba(0, 0, 0, 0.04);
 }
+.btn--white {
+  background-color: #fff;
+  color: var(--color-text);
+  border: 1.5px solid #aaaaaa;
+}
+.btn--white:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  color: #fff;
+}
 
 .btn--login {
   background-color: var(--color-secondary-500);
@@ -185,7 +194,6 @@ ul {
   width: 100%;
   text-align: center;
 }
-
 .separacion {
   background-color: var(--color-primary-700);
   margin: 0px;
