@@ -1176,3 +1176,62 @@ ul {
     grid-template-columns: 1fr;
   }
 }
+
+
+.seccion-impacto {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-950) 0%,
+    var(--color-primary-900) 100%
+  );
+  padding: var(--sp-10) 0;
+}
+
+.impacto__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-4);
+}
+
+.impacto__stat {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-6) var(--sp-1);
+}
+
+.impacto__num {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: var(--sp-1);
+  line-height: 1;
+}
+
+.impacto__label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 960px) {
+  .impacto__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 460px) {
+  .impacto__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .impacto__num {
+    font-size: 30px;
+  }
+  .seccion-impacto {
+    padding: var(--sp-8) 0;
+  }
+}
+
