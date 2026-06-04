@@ -27,6 +27,7 @@
           <li><a href="#caracteristicas" class="navbar__link">Características</a></li>
           <li><a href="#para-quien" class="navbar__link">¿Para quién?</a></li>
           <li><a href="#descargar" class="navbar__link">Descargar</a></li>
+          <li><a href="faq.html#contacto" class="navbar__link">Contacto</a></li>
         </ul>
       </nav>
       <div class="navbar__actions">
@@ -45,6 +46,7 @@
         <li><a href="#caracteristicas" class="navbar__mobile-link">Características</a></li>
         <li><a href="#para-quien" class="navbar__mobile-link">¿Para quién?</a></li>
         <li><a href="#descargar" class="navbar__mobile-link">Descargar</a></li>
+        <li><a href="faq.html#contacto" class="navbar__mobile-link">Contacto</a></li>
       </ul>
       <div class="navbar__mobile-actions">
         <a href="#" class="btn btn--login btn--full">Iniciar sesión</a>
@@ -321,6 +323,63 @@
       </div>
     </div>
   </section>
+  <section class="seccion-scanner" id="scanner-ia">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><strong>Prueba nuestra IA de clasificación</strong></h2>
+        <p class="section-sub">Selecciona un tipo de residuo y descubre cómo EcoSmart lo clasificaría al instante.</p>
+      </div>
+      <div class="scanner__demo">
+        <div class="scanner__selector">
+          <p class="scanner__selector-label">¿Qué residuo tienes?</p>
+          <div class="scanner__options" id="scannerOptions">
+            <button class="scanner__opt" data-tipo="Plástico" data-color="#2196F3" data-tacho="Azul" data-instruccion="Aplana la botella, retira la tapa y deposítala en el tacho azul.">
+              <span class="scanner__opt-emoji">🍶</span>Botella de plástico
+            </button>
+            <button class="scanner__opt" data-tipo="Vidrio" data-color="#4CAF50" data-tacho="Verde" data-instruccion="Asegúrate de que esté vacío y sin tapa. Deposítala en el tacho verde.">
+              <span class="scanner__opt-emoji">🍾</span>Botella de vidrio
+            </button>
+            <button class="scanner__opt" data-tipo="Papel / Cartón" data-color="#FF9800" data-tacho="Naranja" data-instruccion="Dobla el cartón y retira cualquier residuo de comida antes de depositarlo.">
+              <span class="scanner__opt-emoji">📦</span>Caja de cartón
+            </button>
+            <button class="scanner__opt" data-tipo="Orgánico" data-color="#795548" data-tacho="Marrón" data-instruccion="Escurre bien los líquidos y deposítalo en el tacho marrón de orgánicos.">
+              <span class="scanner__opt-emoji">🍌</span>Cáscara de fruta
+            </button>
+            <button class="scanner__opt" data-tipo="Metal" data-color="#607D8B" data-tacho="Gris" data-instruccion="Aplasta la lata para reducir volumen y deposítala en el tacho gris.">
+              <span class="scanner__opt-emoji">🥫</span>Lata de aluminio
+            </button>
+            <button class="scanner__opt" data-tipo="Residuo Peligroso" data-color="#F44336" data-tacho="Rojo ⚠️" data-instruccion="¡Residuo peligroso! No lo mezcles con otros residuos. Llévalo a un punto de acopio especializado.">
+              <span class="scanner__opt-emoji">🔋</span>Pila / Batería
+            </button>
+          </div>
+        </div>
+        <div class="scanner__result" id="scannerResult" aria-live="polite">
+          <div class="scanner__result-placeholder" id="scannerPlaceholder">
+            <span class="scanner__result-icon">🔍</span>
+            <p>Selecciona un residuo para ver la clasificación</p>
+          </div>
+          <div class="scanner__result-card" id="scannerCard" hidden>
+            <div class="scanner__result-header" id="scannerHeader">
+              <span class="scanner__result-check">✓</span>
+              <span class="scanner__result-title">Residuo identificado</span>
+            </div>
+            <div class="scanner__result-body">
+              <div class="scanner__result-row">
+                <span class="scanner__result-lbl">Categoría:</span>
+                <span class="scanner__result-val" id="scannerCategoria">—</span>
+              </div>
+              <div class="scanner__result-row">
+                <span class="scanner__result-lbl">Tacho recomendado:</span>
+                <span class="scanner__result-val" id="scannerTacho">—</span>
+              </div>
+              <div class="scanner__result-instruccion" id="scannerInstruccion">—</div>
+              <div class="scanner__result-puntos">+15 EcoCoins al depositar este residuo 🌿</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="seccion-descarga" id="descargar">
     <div class="container">
       <div class="seccion-descarga__inner">
@@ -363,7 +422,7 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <img src="assets/images/logoEcosmart_dark.png" alt="EcoSmart logo">
+          <img src="images/logoEcosmart_dark.png" alt="EcoSmart logo">
           <p class=" footer__brand-desc">
           Plataforma de gestión inteligente de residuos sólidos.
           Conectamos ciudadanos, municipalidades y
@@ -405,6 +464,8 @@
             <li><a href="#para-quien">Para municipalidades</a></li>
             <li><a href="#para-quien">Para recicladores</a></li>
             <li><a href="#descargar">Descargar app</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="faq.html#contacto">Contacto</a></li>
           </ul>
         </div>
         <div class="footer__col">
