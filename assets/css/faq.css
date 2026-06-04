@@ -1,9 +1,4 @@
-/* ═══════════════════════════════════════════════
-   ECOSMART — faq.css
-   Styles for faq.html: hero, accordion, contact
-═══════════════════════════════════════════════ */
 
-/* ── FAQ Hero ────────────────────────────────── */
 .faq-hero {
   background: linear-gradient(135deg, var(--color-primary-950) 0%, var(--color-primary-900) 100%);
   padding: var(--sp-12) 0 var(--sp-10);
@@ -52,7 +47,6 @@
   flex-wrap: wrap;
 }
 
-/* ── FAQ Section ─────────────────────────────── */
 .seccion-faq {
   background-color: var(--color-primary-100);
   padding: var(--sp-10) 0;
@@ -77,7 +71,6 @@
   letter-spacing: 0.06em;
 }
 
-/* ── Accordion Item ──────────────────────────── */
 .faq__item {
   background-color: var(--color-white);
   border: 1px solid var(--color-primary-200);
@@ -144,7 +137,6 @@
   padding: 0 var(--sp-3) var(--sp-3);
 }
 
-/* ── Contact Section ─────────────────────────── */
 .seccion-contacto {
   background-color: var(--color-white);
   padding: var(--sp-10) 0;
@@ -197,7 +189,6 @@
   flex-shrink: 0;
 }
 
-/* Form */
 .contacto__form-wrapper {
   background-color: var(--color-primary-100);
   border: 1px solid var(--color-primary-200);
@@ -268,7 +259,6 @@
   display: none;
 }
 
-/* Success state */
 .form__success {
   text-align: center;
   padding: var(--sp-8) var(--sp-4);
@@ -295,7 +285,6 @@
   line-height: 1.7;
 }
 
-/* ── Responsive ──────────────────────────────── */
 @media (max-width: 960px) {
   .faq-hero__inner  { flex-direction: column; align-items: flex-start; }
   .faq-hero__title  { font-size: 32px; }
