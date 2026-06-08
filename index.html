@@ -79,7 +79,7 @@
       </div>
     </div>
   </section>
-  <hr class="separacion"/>
+  <hr class="separacion" />
   <section class="seccion-pasos" id="como-funciona">
     <div class="container">
       <div class="section-header">
@@ -333,22 +333,28 @@
         <div class="scanner__selector">
           <p class="scanner__selector-label">¿Qué residuo tienes?</p>
           <div class="scanner__options" id="scannerOptions">
-            <button class="scanner__opt" data-tipo="Plástico" data-color="#2196F3" data-tacho="Azul" data-instruccion="Aplana la botella, retira la tapa y deposítala en el tacho azul.">
+            <button class="scanner__opt" data-tipo="Plástico" data-color="#2196F3" data-tacho="Azul"
+              data-instruccion="Aplana la botella, retira la tapa y deposítala en el tacho azul.">
               <span class="scanner__opt-emoji">🍶</span>Botella de plástico
             </button>
-            <button class="scanner__opt" data-tipo="Vidrio" data-color="#4CAF50" data-tacho="Verde" data-instruccion="Asegúrate de que esté vacío y sin tapa. Deposítala en el tacho verde.">
+            <button class="scanner__opt" data-tipo="Vidrio" data-color="#4CAF50" data-tacho="Verde"
+              data-instruccion="Asegúrate de que esté vacío y sin tapa. Deposítala en el tacho verde.">
               <span class="scanner__opt-emoji">🍾</span>Botella de vidrio
             </button>
-            <button class="scanner__opt" data-tipo="Papel / Cartón" data-color="#FF9800" data-tacho="Naranja" data-instruccion="Dobla el cartón y retira cualquier residuo de comida antes de depositarlo.">
+            <button class="scanner__opt" data-tipo="Papel / Cartón" data-color="#FF9800" data-tacho="Naranja"
+              data-instruccion="Dobla el cartón y retira cualquier residuo de comida antes de depositarlo.">
               <span class="scanner__opt-emoji">📦</span>Caja de cartón
             </button>
-            <button class="scanner__opt" data-tipo="Orgánico" data-color="#795548" data-tacho="Marrón" data-instruccion="Escurre bien los líquidos y deposítalo en el tacho marrón de orgánicos.">
+            <button class="scanner__opt" data-tipo="Orgánico" data-color="#795548" data-tacho="Marrón"
+              data-instruccion="Escurre bien los líquidos y deposítalo en el tacho marrón de orgánicos.">
               <span class="scanner__opt-emoji">🍌</span>Cáscara de fruta
             </button>
-            <button class="scanner__opt" data-tipo="Metal" data-color="#607D8B" data-tacho="Gris" data-instruccion="Aplasta la lata para reducir volumen y deposítala en el tacho gris.">
+            <button class="scanner__opt" data-tipo="Metal" data-color="#607D8B" data-tacho="Gris"
+              data-instruccion="Aplasta la lata para reducir volumen y deposítala en el tacho gris.">
               <span class="scanner__opt-emoji">🥫</span>Lata de aluminio
             </button>
-            <button class="scanner__opt" data-tipo="Residuo Peligroso" data-color="#F44336" data-tacho="Rojo ⚠️" data-instruccion="¡Residuo peligroso! No lo mezcles con otros residuos. Llévalo a un punto de acopio especializado.">
+            <button class="scanner__opt" data-tipo="Residuo Peligroso" data-color="#F44336" data-tacho="Rojo ⚠️"
+              data-instruccion="¡Residuo peligroso! No lo mezcles con otros residuos. Llévalo a un punto de acopio especializado.">
               <span class="scanner__opt-emoji">🔋</span>Pila / Batería
             </button>
           </div>
@@ -380,6 +386,195 @@
       </div>
     </div>
   </section>
+
+
+  <section class="seccion-impacto" id="impacto">
+    <div class="container">
+      <div class="section-header section-header--light">
+        <h2 class="section-title section-title--light"><strong>El cambio se mide en números</strong></h2>
+        <p class="section-sub section-sub--light">Desde que EcoSmart comenzó, la comunidad ha generado un impacto
+          ambiental real y verificable.</p>
+      </div>
+      <div class="impacto__grid">
+        <div class="impacto__stat">
+          <span class="impacto__num" data-target="120000" data-suffix="+">0</span>
+          <span class="impacto__label">Residuos clasificados</span>
+        </div>
+        <div class="impacto__stat">
+          <span class="impacto__num" data-target="47" data-suffix=" ton">0</span>
+          <span class="impacto__label">CO₂ evitado</span>
+        </div>
+        <div class="impacto__stat">
+          <span class="impacto__num" data-target="8500" data-suffix="">0</span>
+          <span class="impacto__label">Usuarios activos</span>
+        </div>
+        <div class="impacto__stat">
+          <span class="impacto__num" data-target="320" data-suffix="">0</span>
+          <span class="impacto__label">Contenedores IoT activos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="seccion-mapa" id="mapa-contenedores">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><strong>Contenedores inteligentes cerca de ti</strong></h2>
+        <p class="section-sub">Encuentra el contenedor más cercano con capacidad disponible en tiempo real.</p>
+      </div>
+      <div class="mapa__scroll">
+        <div class="mapa__wrapper">
+          <div class="mapa__pin" style="top:32%;left:38%;">
+            <span class="mapa__pin-icon mapa__pin-icon--disponible">📍</span>
+            <div class="mapa__tooltip">
+              <strong>Cont. Ca.Tomas E.</strong>
+              <span>Plástico / Vidrio</span>
+              <span class="mapa__nivel">Llenado: 42%</span>
+            </div>
+          </div>
+          <div class="mapa__pin" style="top:45%;left:52%;">
+            <span class="mapa__pin-icon mapa__pin-icon--medio">📍</span>
+            <div class="mapa__tooltip">
+              <strong>Cont. Guillermo Marconi</strong>
+              <span>Papel / Cartón</span>
+              <span class="mapa__nivel mapa__nivel--alto">Llenado: 78%</span>
+            </div>
+          </div>
+          <div class="mapa__pin" style="top:55%;left:44%;">
+            <span class="mapa__pin-icon mapa__pin-icon--lleno">📍</span>
+            <div class="mapa__tooltip">
+              <strong>Cont. Av. Dos de Mayo(1)</strong>
+              <span>Orgánicos</span>
+              <span class="mapa__nivel mapa__nivel--critico">Llenado: 91% — Casi lleno</span>
+            </div>
+          </div>
+          <div class="mapa__pin" style="top:28%;left:62%;">
+            <span class="mapa__pin-icon mapa__pin-icon--disponible">📍</span>
+            <div class="mapa__tooltip">
+              <strong>Cont. C. Barcelona</strong>
+              <span>General</span>
+              <span class="mapa__nivel">Llenado: 15%</span>
+            </div>
+          </div>
+          <div class="mapa__pin" style="top:62%;left:60%;">
+            <span class="mapa__pin-icon mapa__pin-icon--disponible">📍</span>
+            <div class="mapa__tooltip">
+              <strong>Cont. Av. Dos de Mayo(2)</strong>
+              <span>Electrónicos</span>
+              <span class="mapa__nivel">Llenado: 30%</span>
+            </div>
+          </div>
+          <div class="mapa__leyenda">
+            <span class="mapa__leyenda-item"><span class="dot dot--verde"></span>Disponible</span>
+            <span class="mapa__leyenda-item"><span class="dot dot--amarillo"></span>Llenado &gt;60%</span>
+            <span class="mapa__leyenda-item"><span class="dot dot--rojo"></span>Casi lleno</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion-tachos" id="guia-tachos">
+    <div class="container">
+      <div class="section-header section-header--light">
+        <h2 class="section-title section-title--light"><strong>¿Qué va en cada tacho?</strong></h2>
+        <p class="section-sub section-sub--light">Aprende la guía de colores de reciclaje para clasificar correctamente tus residuos.</p>
+      </div>
+      <div class="tachos__grid">
+        <div class="tacho-card">
+          <div class="tacho-card__bin" style="background:#2196F3;">♻</div>
+          <h3 class="tacho-card__title">Azul</h3>
+          <p class="tacho-card__tipo">Plásticos</p>
+          <ul class="tacho-card__lista">
+            <li>Botellas PET</li><li>Envases de yogur</li><li>Bolsas plásticas</li><li>Tapas de plástico</li>
+          </ul>
+        </div>
+        <div class="tacho-card">
+          <div class="tacho-card__bin" style="background:#4CAF50;">♻</div>
+          <h3 class="tacho-card__title">Verde</h3>
+          <p class="tacho-card__tipo">Vidrio</p>
+          <ul class="tacho-card__lista">
+            <li>Botellas de vidrio</li><li>Frascos de conserva</li><li>Envases de perfume</li><li>Vasos rotos</li>
+          </ul>
+        </div>
+        <div class="tacho-card">
+          <div class="tacho-card__bin" style="background:#FF9800;">♻</div>
+          <h3 class="tacho-card__title">Naranja</h3>
+          <p class="tacho-card__tipo">Papel y Cartón</p>
+          <ul class="tacho-card__lista">
+            <li>Periódicos</li><li>Cajas de cartón</li><li>Papel de oficina</li><li>Revistas</li>
+          </ul>
+        </div>
+        <div class="tacho-card">
+          <div class="tacho-card__bin" style="background:#795548;">♻</div>
+          <h3 class="tacho-card__title">Marrón</h3>
+          <p class="tacho-card__tipo">Orgánicos</p>
+          <ul class="tacho-card__lista">
+            <li>Restos de comida</li><li>Cáscaras de fruta</li><li>Posos de café</li><li>Hojas secas</li>
+          </ul>
+        </div>
+        <div class="tacho-card">
+          <div class="tacho-card__bin" style="background:#607D8B;">♻</div>
+          <h3 class="tacho-card__title">Gris</h3>
+          <p class="tacho-card__tipo">Metales</p>
+          <ul class="tacho-card__lista">
+            <li>Latas de aluminio</li><li>Latas de conserva</li><li>Tapas metálicas</li><li>Papel aluminio</li>
+          </ul>
+        </div>
+        <div class="tacho-card tacho-card--peligroso">
+          <div class="tacho-card__bin" style="background:#F44336;">⚠</div>
+          <h3 class="tacho-card__title">Rojo</h3>
+          <p class="tacho-card__tipo">Peligrosos</p>
+          <ul class="tacho-card__lista">
+            <li>Pilas y baterías</li><li>Medicamentos</li><li>Aceite de cocina</li><li>Electrónicos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section class="seccion-educacion" id="educacion">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><strong>Aprende a reciclar mejor</strong></h2>
+        <p class="section-sub">Artículos, guías y consejos para convertirte en un experto del reciclaje sostenible.</p>
+      </div>
+      <div class="educacion__grid">
+        <article class="edu-card">
+          <div class="edu-card__img-wrapper">
+            <img src="assets/images/edu1.jpg" alt="Clasificación de residuos" class="edu-card__img" />
+          </div>
+          <div class="edu-card__body">
+            <span class="edu-card__tag">Guía básica</span>
+            <h3 class="edu-card__title">Los 5 tipos de residuos que debes conocer</h3>
+            <p class="edu-card__desc">Aprende a diferenciar plásticos, vidrios, papel, orgánicos y residuos peligrosos para clasificarlos correctamente desde casa.</p>
+            <a href="faq.html" class="edu-card__link">Leer más →</a>
+          </div>
+        </article>
+        <article class="edu-card">
+          <div class="edu-card__img-wrapper">
+            <img src="assets/images/edu2.jpg" alt="Economia circular" class="edu-card__img" />
+          </div>
+          <div class="edu-card__body">
+            <span class="edu-card__tag">Sostenibilidad</span>
+            <h3 class="edu-card__title">¿Qué es la economía circular y por qué importa?</h3>
+            <p class="edu-card__desc">Descubre cómo el modelo circular reduce residuos al mínimo y cómo tus hábitos de reciclaje contribuyen a este sistema.</p>
+            <a href="faq.html" class="edu-card__link">Leer más →</a>
+          </div>
+        </article>
+        <article class="edu-card">
+          <div class="edu-card__img-wrapper">
+            <img src="assets/images/edu3.jpg" alt="Residuos peligrosos" class="edu-card__img" />
+          </div>
+          <div class="edu-card__body">
+            <span class="edu-card__tag">Residuos especiales</span>
+            <h3 class="edu-card__title">Cómo disponer correctamente de residuos peligrosos</h3>
+            <p class="edu-card__desc">Pilas, medicamentos y electrónicos necesitan un tratamiento especial. Te explicamos dónde y cómo desecharlos de forma segura.</p>
+            <a href="faq.html" class="edu-card__link">Leer más →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="seccion-descarga" id="descargar">
     <div class="container">
       <div class="seccion-descarga__inner">
@@ -418,16 +613,21 @@
       </div>
     </div>
   </section>
+
+
+
+
+
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
           <img src="images/logoEcosmart_dark.png" alt="EcoSmart logo">
           <p class=" footer__brand-desc">
-          Plataforma de gestión inteligente de residuos sólidos.
-          Conectamos ciudadanos, municipalidades y
-          recicladores para construir ciudades más
-          sostenibles.
+            Plataforma de gestión inteligente de residuos sólidos.
+            Conectamos ciudadanos, municipalidades y
+            recicladores para construir ciudades más
+            sostenibles.
           </p>
           <div class="footer__social">
             <a href="https://x.com/" class="footer__social-link" aria-label="X-(twitter)">

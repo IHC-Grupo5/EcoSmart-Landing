@@ -157,47 +157,88 @@
         });
     }
 
-    var scannerOpts      = document.querySelectorAll('.scanner__opt');
-  var scannerPlaceholder = document.getElementById('scannerPlaceholder');
-  var scannerCard      = document.getElementById('scannerCard');
-  var scannerHeader    = document.getElementById('scannerHeader');
-  var scannerCategoria = document.getElementById('scannerCategoria');
-  var scannerTacho     = document.getElementById('scannerTacho');
-  var scannerInstruccion = document.getElementById('scannerInstruccion');
+    var scannerOpts = document.querySelectorAll('.scanner__opt');
+    var scannerPlaceholder = document.getElementById('scannerPlaceholder');
+    var scannerCard = document.getElementById('scannerCard');
+    var scannerHeader = document.getElementById('scannerHeader');
+    var scannerCategoria = document.getElementById('scannerCategoria');
+    var scannerTacho = document.getElementById('scannerTacho');
+    var scannerInstruccion = document.getElementById('scannerInstruccion');
 
-  if (scannerOpts.length) {
-    scannerOpts.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        scannerOpts.forEach(function (b) { b.classList.remove('is-active'); });
-        btn.classList.add('is-active');
+    if (scannerOpts.length) {
+        scannerOpts.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                scannerOpts.forEach(function (b) { b.classList.remove('is-active'); });
+                btn.classList.add('is-active');
 
-        var tipo       = btn.getAttribute('data-tipo');
-        var color      = btn.getAttribute('data-color');
-        var tacho      = btn.getAttribute('data-tacho');
-        var instruccion = btn.getAttribute('data-instruccion');
+                var tipo = btn.getAttribute('data-tipo');
+                var color = btn.getAttribute('data-color');
+                var tacho = btn.getAttribute('data-tacho');
+                var instruccion = btn.getAttribute('data-instruccion');
 
-        if (scannerPlaceholder) {
-          scannerPlaceholder.style.display = 'flex';
-          scannerPlaceholder.querySelector('p').textContent = 'Analizando residuo…';
+                if (scannerPlaceholder) {
+                    scannerPlaceholder.style.display = 'flex';
+                    scannerPlaceholder.querySelector('p').textContent = 'Analizando residuo…';
+                }
+                if (scannerCard) scannerCard.hidden = true;
+
+                setTimeout(function () {
+                    if (scannerPlaceholder) scannerPlaceholder.style.display = 'none';
+                    if (scannerCard) {
+                        scannerCard.hidden = false;
+                        if (scannerHeader) scannerHeader.style.backgroundColor = color;
+                        if (scannerCategoria) scannerCategoria.textContent = tipo;
+                        if (scannerTacho) {
+                            scannerTacho.textContent = 'Tacho ' + tacho;
+                            scannerTacho.style.color = color;
+                        }
+                        if (scannerInstruccion) scannerInstruccion.textContent = instruccion;
+                    }
+                }, 700);
+            });
+        });
+    }
+
+    var counters = document.querySelectorAll('.impacto__num');
+
+    function animateCounter(el) {
+        var target = parseInt(el.getAttribute('data-target'), 10);
+        var suffix = el.getAttribute('data-suffix') || '';
+        var duration = 1800;
+        var start = null;
+        var startVal = 0;
+
+        function step(timestamp) {
+            if (!start) start = timestamp;
+            var progress = Math.min((timestamp - start) / duration, 1);
+            var eased = 1 - Math.pow(1 - progress, 3);
+            var current = Math.floor(startVal + eased * (target - startVal));
+            el.textContent = current.toLocaleString('es-PE') + suffix;
+            if (progress < 1) requestAnimationFrame(step);
+            else el.textContent = target.toLocaleString('es-PE') + suffix;
         }
-        if (scannerCard) scannerCard.hidden = true;
+        requestAnimationFrame(step);
+    }
 
-        setTimeout(function () {
-          if (scannerPlaceholder) scannerPlaceholder.style.display = 'none';
-          if (scannerCard) {
-            scannerCard.hidden = false;
-            if (scannerHeader) scannerHeader.style.backgroundColor = color;
-            if (scannerCategoria) scannerCategoria.textContent = tipo;
-            if (scannerTacho) {
-              scannerTacho.textContent = 'Tacho ' + tacho;
-              scannerTacho.style.color = color;
-            }
-            if (scannerInstruccion) scannerInstruccion.textContent = instruccion;
-          }
-        }, 700);
-      });
-    });
-  }
+    if (counters.length && 'IntersectionObserver' in window) {
+        var counterObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        counters.forEach(function (counter) {
+            counterObserver.observe(counter);
+        });
+    } else {
+        counters.forEach(function (counter) { animateCounter(counter); });
+    }
+
+
+
 
 
 })();
