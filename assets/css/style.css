@@ -1243,7 +1243,7 @@ ul {
 .mapa__wrapper {
   position: relative;
   border-radius: var(--radius-lg);
-  background-image: url(/assets/images/mapa-lima.jpg);
+  background-image: url(https://ihc-grupo5.github.io/EcoSmart-Landing/assets/images/mapa-lima.jpg);
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
