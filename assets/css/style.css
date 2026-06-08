@@ -1392,3 +1392,200 @@ ul {
     gap: var(--sp-1);
   }
 }
+
+.seccion-tachos {
+  background-color: var(--color-primary-900);
+  padding: var(--sp-10) 0;
+}
+
+.tachos__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--sp-3);
+}
+
+.tacho-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease;
+}
+
+.tacho-card:hover {
+  transform: translateY(-4px);
+}
+
+.tacho-card__bin {
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.9);
+  padding: var(--sp-4) var(--sp-2);
+}
+
+.tacho-card__title {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: var(--sp-1) var(--sp-2) 4px;
+}
+
+.tacho-card__tipo {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--color-dark-neutral);
+  font-weight: 600;
+  margin-bottom: var(--sp-2);
+}
+
+.tacho-card__lista {
+  list-style: none;
+  padding: 0 var(--sp-2) var(--sp-3);
+}
+
+.tacho-card__lista li {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--color-light-neutral);
+  padding: 3px 0;
+  border-bottom: 1px solid var(--color-primary-100);
+}
+
+.tacho-card__lista li:last-child {
+  border-bottom: none;
+}
+
+.tacho-card--peligroso .tacho-card__bin {
+  animation: pulse-warn 2s infinite;
+}
+
+@keyframes pulse-warn {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.seccion-educacion {
+  background-color: var(--color-white);
+  padding: var(--sp-10) 0;
+  border-top: 1px solid var(--color-primary-200);
+}
+
+.educacion__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-4);
+}
+
+.edu-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-primary-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.edu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(20, 90, 52, 0.12);
+}
+
+.edu-card__img-wrapper {
+  overflow: hidden;
+  height: 180px;
+}
+
+.edu-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.edu-card:hover .edu-card__img {
+  transform: scale(1.04);
+}
+
+.edu-card__body {
+  padding: var(--sp-3);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.edu-card__tag {
+  display: inline-block;
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-900);
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  padding: 3px 10px;
+  margin-bottom: var(--sp-2);
+}
+
+.edu-card__title {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--sp-1);
+  line-height: 1.4;
+}
+
+.edu-card__desc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--color-light-neutral);
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: var(--sp-3);
+}
+
+.edu-card__link {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-primary-800);
+  text-decoration: none;
+  transition: color 0.2s;
+  align-self: flex-start;
+}
+
+.edu-card__link:hover {
+  color: var(--color-primary-600);
+}
+
+@media (max-width: 960px) {
+  .tachos__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .educacion__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 460px) {
+
+  .tachos__grid,
+  .educacion__grid {
+    grid-template-columns: 1fr;
+  }
+  .seccion-tachos,
+  .seccion-educacion {
+    padding: var(--sp-8) 0;
+  }
+}
