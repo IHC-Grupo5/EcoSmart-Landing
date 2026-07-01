@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoSmart | Registro de Institución</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/dashboard.css" />
+</head>
+<body>
+
+  <div class="login-page">
+
+    <div class="auth-panel auth-panel--left">
+      <div class="auth-panel__content">
+        <div class="auth-brand">
+          <img src="assets/images/logoEcosmart_white.png" width="100" alt="EcoSmart logo" />
+        </div>
+
+        <h1 class="auth-panel__title">Únete a EcoSmart<br />Municipal</h1>
+        <p class="auth-panel__desc">
+          Plataforma oficial para municipalidades distritales y
+          provinciales. Gestiona residuos, optimiza rutas y mide el
+          impacto ambiental de tu distrito.
+        </p>
+
+        <div class="auth-stats">
+          <div class="auth-stat-card">
+            <div class="auth-stat-card__row">
+              <span class="auth-stat-card__num">1,696</span>
+            </div>
+            <span class="auth-stat-card__label">Municipalidades en Perú</span>
+          </div>
+          <div class="auth-stat-card">
+            <div class="auth-stat-card__row">
+              <span class="auth-stat-card__num">48 hrs</span>
+            </div>
+            <span class="auth-stat-card__label">Tiempo de validación</span>
+          </div>
+        </div>
+
+        <p class="auth-panel__note">Solo para representantes institucionales autorizados.</p>
+
+      </div>
+    </div>
+
+    <div class="auth-panel auth-panel--right auth-panel--darker">
+      <div class="auth-form-wrapper">
+
+        <h2 class="auth-form__title auth-form__title--white">Datos de la institución</h2>
+
+        <div class="auth-info-box">
+          <span class="auth-info-box__icon">ⓘ</span>
+          <p>
+            Tu solicitud será revisada por el equipo EcoSmart. Recibirás
+            una confirmación en tu correo institucional en un máximo de
+            <strong>48 horas hábiles</strong>.
+          </p>
+        </div>
+
+        <form class="auth-form" id="registerForm" novalidate>
+
+          <div class="auth-form__row">
+            <div class="auth-form__group">
+              <label class="auth-form__label auth-form__label--light" for="nombreEntidad">Nombre de la entidad</label>
+              <input class="auth-form__input" type="text" id="nombreEntidad" name="nombreEntidad" placeholder="Municipalidad" required />
+              <span class="auth-form__error">Campo obligatorio.</span>
+            </div>
+            <div class="auth-form__group">
+              <label class="auth-form__label auth-form__label--light" for="rucInst">RUC institucional *</label>
+              <input class="auth-form__input" type="text" id="rucInst" name="rucInst" placeholder="20123456789" maxlength="11" required />
+              <span class="auth-form__error">Ingresa un RUC válido de 11 dígitos.</span>
+            </div>
+          </div>
+
+          <div class="auth-form__row">
+            <div class="auth-form__group">
+              <label class="auth-form__label auth-form__label--light" for="nombreRepresentante">Nombre del representante *</label>
+              <input class="auth-form__input" type="text" id="nombreRepresentante" name="nombreRepresentante" placeholder="Juan Pérez" required />
+              <span class="auth-form__error">Campo obligatorio.</span>
+            </div>
+            <div class="auth-form__group">
+              <label class="auth-form__label auth-form__label--light" for="cargoInst">Cargo *</label>
+              <input class="auth-form__input" type="text" id="cargoInst" name="cargoInst" placeholder="Jefe de Gestión" required />
+              <span class="auth-form__error">Campo obligatorio.</span>
+            </div>
+          </div>
+
+          <div class="auth-form__group">
+            <label class="auth-form__label auth-form__label--light" for="correoRepresentante">Correo institucional del representante *</label>
+            <input class="auth-form__input" type="email" id="correoRepresentante" name="correoRepresentante" placeholder="jperez@muni-miraflores.gob.pe" required />
+            <span class="auth-form__error">Ingresa un correo institucional válido.</span>
+          </div>
+
+          <div class="auth-form__row">
+            <div class="auth-form__group">
+              <label class="auth-form__label auth-form__label--light" for="passwordReg">Contraseña *</label>
+              <input class="auth-form__input" type="password" id="passwordReg" name="passwordReg" placeholder="Mín. 8 caracteres" minlength="8" required />
+              <span class="auth-form__error">Mínimo 8 caracteres.</span>
+            </div>
+            <div class="auth-form__group">
+              <label class="auth-form__label auth-form__label--light" for="passwordConfirm">Confirmar contraseña *</label>
+              <input class="auth-form__input" type="password" id="passwordConfirm" name="passwordConfirm" placeholder="Repetir contraseña" minlength="8" required />
+              <span class="auth-form__error">Las contraseñas no coinciden.</span>
+            </div>
+          </div>
+
+          <button type="submit" class="auth-btn-primary" id="registerSubmitBtn">
+            <span class="auth-btn-primary__text">Enviar Solicitud &nbsp;▷</span>
+            <span class="auth-btn-primary__spinner" hidden></span>
+          </button>
+
+        </form>
+
+        <div class="auth-success" id="registerSuccess" hidden>
+          <span class="auth-success__icon">✅</span>
+          <h3>¡Solicitud enviada con éxito!</h3>
+          <p>
+            Nuestro equipo revisará los datos de tu institución. Recibirás
+            una confirmación en tu correo institucional en un máximo de
+            <strong>48 horas hábiles</strong>.
+          </p>
+          <a href="municipal-login.html" class="auth-btn-primary auth-btn-primary--link">Volver a inicio de sesión</a>
+        </div>
+
+        <p class="auth-form__footer auth-form__footer--light" id="registerFooterLink">
+          ¿Ya tienes cuenta?
+          <a href="municipal-login.html" class="auth-form__link">Iniciar sesión</a>
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
