@@ -234,7 +234,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 9px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid #777777;
 }
 
 .dash-zone-panel__row:last-child {

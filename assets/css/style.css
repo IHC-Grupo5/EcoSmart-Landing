@@ -89,8 +89,8 @@ ul {
   --radius-lg: 16px;
   --radius-xl: 24px;
 
-  --shadow-card: 0 2px 12px rgba(20, 90, 52, 0.08);
-  --shadow-nav: 0 2px 16px rgba(0, 0, 0, 0.12);
+  --shadow-card: 0 2px 12px rgba(20, 90, 52, 0.1);
+  --shadow-nav: 0 2px 16px rgba(0, 0, 0, 0.1);
 
   --container-max: 1160px;
   --nav-height: 68px;
@@ -127,7 +127,7 @@ ul {
   color: var(--color-white);
 }
 .section-sub--light {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .btn {
@@ -164,7 +164,7 @@ ul {
   border: 1.5px solid #aaaaaa;
 }
 .btn--ghost:hover {
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .btn--white {
   background-color: #fff;
@@ -172,7 +172,7 @@ ul {
   border: 1.5px solid #aaaaaa;
 }
 .btn--white:hover {
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: rgba(0, 0, 0, 0.1);
   color: #fff;
 }
 
@@ -232,7 +232,7 @@ ul {
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
   transition: color 0.2s;
 }
 
@@ -282,7 +282,7 @@ ul {
 .navbar__mobile-menu {
   display: none;
   background-color: var(--color-primary-900);
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid #777777;
   padding: var(--sp-2) var(--sp-3) var(--sp-3);
 }
 
@@ -295,7 +295,7 @@ ul {
 }
 
 .navbar__mobile-list li {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #777777;
 }
 
 .navbar__mobile-link {
@@ -437,7 +437,7 @@ ul {
 
 .paso-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(20, 90, 52, 0.14);
+  box-shadow: 0 8px 24px rgba(20, 90, 52, 0.1);
 }
 
 .paso-card__header {
@@ -591,8 +591,8 @@ ul {
 
 .seg-card__tag {
   display: inline-block;
-  background-color: rgba(255, 255, 255, 0.15);
-  color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
   font-family: var(--font-heading);
   font-size: 10px;
   font-weight: 700;
@@ -627,7 +627,7 @@ ul {
 }
 
 .seg-card--dark .seg-card__desc {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .seg-card__list {
@@ -789,7 +789,7 @@ ul {
 .footer__brand-desc {
   font-family: var(--font-body);
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.6);
   line-height: 1.7;
   margin-bottom: var(--sp-3);
 }
@@ -803,7 +803,7 @@ ul {
 .footer__social-link {
   width: 36px;
   height: 36px;
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -840,7 +840,7 @@ ul {
 .footer__col-list a {
   font-family: var(--font-body);
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.6);
   transition: color 0.2s;
 }
 
@@ -849,7 +849,7 @@ ul {
 }
 
 .footer__bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid #777777;
   padding-top: var(--sp-3);
   text-align: center;
 }
@@ -857,7 +857,7 @@ ul {
 .footer__bottom p {
   font-family: var(--font-body);
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 @media (max-width: 960px) {
@@ -1100,7 +1100,7 @@ ul {
   background-color: var(--color-white);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(20, 90, 52, 0.12);
+  box-shadow: 0 4px 20px rgba(20, 90, 52, 0.1);
   width: 100%;
 }
 
@@ -1195,8 +1195,8 @@ ul {
 
 .impacto__stat {
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #777777;
   border-radius: var(--radius-lg);
   padding: var(--sp-6) var(--sp-1);
 }
@@ -1248,7 +1248,7 @@ ul {
   background-size: contain;
   background-repeat: no-repeat;
   overflow: hidden;
-  box-shadow: 0 4px 24px rgba(20, 90, 52, 0.12);
+  box-shadow: 0 4px 24px rgba(20, 90, 52, 0.1);
   border: 1px solid var(--color-primary-200);
   height: 420px;
 }
@@ -1302,7 +1302,7 @@ ul {
   border-radius: var(--radius-md);
   padding: var(--sp-2) var(--sp-3);
   min-width: 180px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   opacity: 0;
   visibility: hidden;
   transition:
@@ -1328,7 +1328,7 @@ ul {
 }
 
 .mapa__nivel {
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
   margin-top: 4px;
 }
 .mapa__nivel--alto {
@@ -1342,7 +1342,7 @@ ul {
   position: absolute;
   bottom: var(--sp-2);
   left: var(--sp-2);
-  background-color: rgba(15, 36, 24, 0.88);
+  background-color: rgba(15, 36, 24, 0.9);
   border-radius: var(--radius-md);
   padding: var(--sp-2) var(--sp-3);
   display: flex;
@@ -1356,7 +1356,7 @@ ul {
   gap: 6px;
   font-family: var(--font-body);
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .dot {
@@ -1497,7 +1497,7 @@ ul {
 
 .edu-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(20, 90, 52, 0.12);
+  box-shadow: 0 8px 24px rgba(20, 90, 52, 0.1);
 }
 
 .edu-card__img-wrapper {

@@ -35,7 +35,7 @@
 .faq-hero__sub {
   font-family: var(--font-body);
   font-size: 16px;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.7);
   max-width: 520px;
   line-height: 1.7;
 }
@@ -115,7 +115,7 @@
   font-size: 18px;
   flex-shrink: 0;
   color: var(--color-primary-700);
-  transition: transform 0.25s ease;
+  transition: transform 0.3s ease;
   display: inline-block;
 }
 
@@ -230,7 +230,7 @@
 
 .form__input:focus {
   border-color: var(--color-primary-700);
-  box-shadow: 0 0 0 3px rgba(20,90,52,0.12);
+  box-shadow: 0 0 0 3px rgba(20,90,52,0.1);
 }
 
 .form__input.is-invalid {
