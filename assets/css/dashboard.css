@@ -43,8 +43,6 @@
 }
 
 
-
-
 .auth-panel__title {
   font-family: var(--font-heading);
   font-size: 30px;
@@ -172,14 +170,14 @@
   content: '';
   flex: 1;
   height: 1px;
-  background-color: rgba(255,255,255,0.15);
+  background-color: rgba(255,255,255,0.1);
 }
 
 .auth-divider span {
   padding: 0 var(--sp-2);
   font-family: var(--font-body);
   font-size: 11px;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.5);
   white-space: nowrap;
 }
 
@@ -187,8 +185,8 @@
 .auth-info-box {
   display: flex;
   gap: var(--sp-2);
-  background-color: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
+  background-color: rgba(255,255,255,0.1);
+  border: 1px solid #565656;
   border-radius: var(--radius-md);
   padding: var(--sp-2) var(--sp-3);
   margin-bottom: var(--sp-4);
@@ -235,19 +233,19 @@
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 500;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.9);
 }
 
 .auth-form__label--light {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.9);
 }
 
 .auth-form__input {
   font-family: var(--font-body);
   font-size: 14px;
   color: var(--color-white);
-  background-color: rgba(255,255,255,0.08);
-  border: 1.5px solid rgba(255,255,255,0.15);
+  background-color: rgba(255,255,255,0.1);
+  border: 1.5px solid #777777;
   border-radius: var(--radius-sm);
   padding: 12px var(--sp-2);
   outline: none;
@@ -256,12 +254,12 @@
 }
 
 .auth-form__input::placeholder {
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.4);
 }
 
 .auth-form__input:focus {
   border-color: var(--color-primary-500);
-  background-color: rgba(255,255,255,0.12);
+  background-color: rgba(255,255,255,0.1);
 }
 
 .auth-form__input.is-invalid {
@@ -279,7 +277,7 @@
   align-self: flex-end;
   font-family: var(--font-body);
   font-size: 12px;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.8);
   text-decoration: none;
   margin-top: 2px;
 }
@@ -309,7 +307,7 @@
   margin-top: var(--sp-1);
 }
 
-.auth-btn-primary:hover { opacity: 0.85; }
+.auth-btn-primary:hover { opacity: 0.9; }
 
 .auth-btn-primary--link {
   display: inline-flex;
@@ -357,7 +355,7 @@
 .auth-success p {
   font-family: var(--font-body);
   font-size: 13px;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.7);
   line-height: 1.7;
 }
 
@@ -445,7 +443,7 @@
   font-family: var(--font-heading);
   font-size: 11px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin: var(--sp-3) var(--sp-1) var(--sp-1);
@@ -474,7 +472,7 @@
 }
 
 .dash-sidebar__link:hover {
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .dash-sidebar__link.is-active {
@@ -507,7 +505,7 @@
 }
 
 .dash-sidebar__logout:hover {
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .dash-main {
@@ -536,7 +534,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: rgba(255, 255, 255, 0.9);
   color: var(--color-text);
   border: none;
   border-radius: 999px;
@@ -565,7 +563,7 @@
   display: flex;
   align-items: center;
   gap: var(--sp-2);
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: var(--radius-md);
   padding: var(--sp-2) var(--sp-3);
   margin-bottom: var(--sp-3);
@@ -591,7 +589,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 999px;
   padding: 9px 16px;
   min-width: 220px;
@@ -615,9 +613,8 @@
 }
 
 .dash-chip {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.2);
   color: var(--color-white);
-  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 999px;
   padding: 8px 16px;
   font-family: var(--font-body);
@@ -629,11 +626,11 @@
 }
 
 .dash-chip:hover {
-  background-color: rgba(255, 255, 255, 0.22);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .dash-chip.is-active {
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: rgba(255, 255, 255, 0.9);
   color: var(--color-text);
   border-color: transparent;
   font-weight: 600;
@@ -647,7 +644,7 @@
 }
 
 .dash-card {
-  background-color: rgba(255, 255, 255, 0.94);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: var(--radius-lg);
   padding: var(--sp-3);
 }
@@ -673,7 +670,7 @@
 
 .dash-map__axis {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .dash-map__axis--v {
@@ -758,7 +755,7 @@
   font-weight: 700;
   color: var(--color-text);
   padding: var(--sp-2) var(--sp-3);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 2px solid #333333;
 }
 
 .dash-table td {
@@ -766,7 +763,7 @@
   font-size: 13px;
   color: var(--color-text);
   padding: var(--sp-2) var(--sp-3);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid #cccccc
 }
 
 .dash-table tbody tr:last-child td {
@@ -820,7 +817,7 @@
 }
 
 .dash-table__row--flagged td {
-  background-color: rgba(241, 148, 138, 0.25);
+  background-color: rgba(241, 148, 138, 0.3);
 }
 
 .dash-log-box {

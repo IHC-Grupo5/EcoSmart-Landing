@@ -14,7 +14,7 @@
 .dash-tab-bar {
   display: flex;
   gap: var(--sp-4);
-  border-bottom: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
   margin-bottom: var(--sp-4);
 }
  
@@ -26,7 +26,7 @@
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 15px;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.6);
   cursor: pointer;
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
@@ -91,7 +91,7 @@
   justify-content: space-between;
   gap: var(--sp-2);
   padding: var(--sp-2) 0;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid #cccccc;
 }
  
 .dash-setting-row:last-child {
@@ -135,7 +135,7 @@
 .dash-toggle__track {
   position: absolute;
   inset: 0;
-  background-color: rgba(0,0,0,0.18);
+  background-color: rgba(0,0,0,0.2);
   border-radius: 999px;
   transition: background-color 0.2s ease;
 }
@@ -166,8 +166,8 @@
   display: flex;
   align-items: center;
   gap: var(--sp-2);
-  background-color: rgba(255,255,255,0.06);
-  border: 1.5px solid rgba(255,255,255,0.14);
+  background-color: rgba(255,255,255,0.1);
+  border: 1.5px solid #777777;
   border-radius: var(--radius-md);
   padding: var(--sp-2) var(--sp-3);
   cursor: pointer;
@@ -187,7 +187,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: rgba(255,255,255,0.15);
+  background-color: rgba(255,255,255,0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -221,7 +221,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.35);
+  border: 2px solid #777777;
   flex-shrink: 0;
   position: relative;
 }
@@ -331,7 +331,7 @@
   justify-content: space-between;
   gap: var(--sp-2);
   padding: var(--sp-2) 0;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid #cccccc;
 }
  
 .dash-field-action:last-child {
