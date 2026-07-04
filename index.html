@@ -11,6 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600&display=swap"
     rel="stylesheet" />
   <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
@@ -49,8 +50,8 @@
         <li><a href="faq.html#contacto" class="navbar__mobile-link">Contacto</a></li>
       </ul>
       <div class="navbar__mobile-actions">
-        <a href="#" class="btn btn--login btn--full">Iniciar sesión</a>
-        <a href="#" class="btn btn--register btn--full">Registrarse</a>
+        <a href="municipal-login.html" class="btn btn--login btn--full">Iniciar sesión</a>
+        <a href="municipal-register.html" class="btn btn--register btn--full">Registrarse</a>
       </div>
     </div>
   </header>
@@ -280,6 +281,9 @@
               <li>Historial de impacto personal</li>
               <li>Guías educativas y quizzes</li>
             </ul>
+            <div class="seg-card__actions">
+              <a href="#" class="seg-card__cta" data-segment="ciudadano" data-mobile-href="https://play.google.com/" data-desktop-href="#descargar">Entrar como ciudadano</a>
+            </div>
           </div>
         </div>
         <div class="seg-card  seg-card--dark">
@@ -299,6 +303,9 @@
               <li>Optimización de rutas</li>
               <li>Estadísticas ciudadanas agregadas</li>
             </ul>
+            <div class="seg-card__actions">
+              <a href="#" class="seg-card__cta seg-card__cta--dark" data-segment="municipalidad" data-mobile-href="#descargar" data-desktop-href="municipal-login.html">Abrir panel municipal</a>
+            </div>
           </div>
         </div>
         <div class="seg-card">
@@ -318,6 +325,9 @@
               <li>Registro de recolecciones</li>
               <li>Coordinación con ciudadanos</li>
             </ul>
+            <div class="seg-card__actions">
+              <a href="#" class="seg-card__cta" data-segment="reciclador" data-mobile-href="https://play.google.com/" data-desktop-href="#descargar">Entrar como reciclador</a>
+            </div>
           </div>
         </div>
       </div>
@@ -415,59 +425,144 @@
       </div>
     </div>
   </section>
+
+  <section class="seccion-video-demo" id="video-demo">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title"><strong>Descubre EcoSmart en 60 segundos</strong></h2>
+      <p class="section-sub">Mira en acción cómo la tecnología IoT y la Inteligencia Artificial transforman tus hábitos de reciclaje diario en impacto real.</p>
+    </div>
+
+    <div class="video-demo__card">
+      <!-- LADO IZQUIERDO: VIDEO -->
+      <div class="video-demo__media" aria-label="Reproducir video demostrativo de EcoSmart">
+        <div class="video-demo__placeholder">
+          <div class="video-demo__icon">▶</div>
+          <p>VIDEO DEMO</p>
+          <span>Reemplaza este bloque con tu enlace o archivo de video para mostrar la experiencia completa.</span>
+        </div>
+      </div>
+
+      <!-- LADO DERECHO: CONTENIDO PROFESIONAL -->
+      <div class="video-demo__content">
+        <span class="video-demo__badge">Experiencia Mobile</span>
+        <h3>Tu tacho inteligente, ahora en tu bolsillo</h3>
+        <p class="video-demo__description">
+          Nuestra aplicación móvil combina herramientas avanzadas para que reciclar sea un proceso intuitivo, transparente y sumamente gratificante.
+        </p>
+        
+        <ul class="video-demo__list">
+          <li>
+            <div class="video-demo__list-icon"></div>
+            <div>
+              <strong>Reconocimiento con IA:</strong>
+              <p>Escanea cualquier residuo con tu cámara y descubre al instante cómo clasificarlo correctamente.</p>
+            </div>
+          </li>
+          <li>
+            <div class="video-demo__list-icon"></div>
+            <div>
+              <strong>Rutas y Contenedores IoT:</strong>
+              <p>Encuentra los puntos de acopio más cercanos y verifica su estado de llenado en tiempo real.</p>
+            </div>
+          </li>
+          <li>
+            <div class="video-demo__list-icon"></div>
+            <div>
+              <strong>Ecosistema de Recompensas:</strong>
+              <p>Deposita tus residuos reciclables, acumula EcoCoins automáticamente y canjéalas por beneficios locales.</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="video-demo__actions">
+          <a href="#descargar" class="btn btn--primary">Descargar la App</a>
+          <a href="#scanner-ia" class="btn btn--secondary">Probar Simulador IA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="seccion-testimonios" id="testimonios">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><strong>Lo que dicen nuestros usuarios</strong></h2>
+        <p class="section-sub">Más de 12.000 personas ya confían en EcoSmart para reciclar mejor, recibir recompensas y contribuir a ciudades más sostenibles.</p>
+      </div>
+
+      <div class="testimonios__grid">
+        <article class="testimonio-card">
+          <div class="testimonio-card__stars">★★★★★</div>
+          <p class="testimonio-card__quote">“Desde que uso EcoSmart, reciclar se volvió mucho más fácil. El mapa me ayuda a encontrar los contenedores más cercanos y las recompensas son un extra increíble.”</p>
+          <div class="testimonio-card__person">
+            <div class="testimonio-card__avatar">ML</div>
+            <div>
+              <h3>María López</h3>
+              <span>Ciudadana comprometida</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonio-card">
+          <div class="testimonio-card__stars">★★★★★</div>
+          <p class="testimonio-card__quote">“La app me ahorra tiempo y me permite clasificar residuos en segundos. Me encanta ver cómo mi esfuerzo se traduce en impacto real para mi distrito.”</p>
+          <div class="testimonio-card__person">
+            <div class="testimonio-card__avatar">JR</div>
+            <div>
+              <h3>Javier Ruiz</h3>
+              <span>Usuario frecuente</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonio-card">
+          <div class="testimonio-card__stars">★★★★★</div>
+          <p class="testimonio-card__quote">“Como administradora municipal, EcoSmart me ha ayudado a monitorear los puntos de reciclaje y optimizar rutas de recolección con mucha más eficiencia.”</p>
+          <div class="testimonio-card__person">
+            <div class="testimonio-card__avatar">AC</div>
+            <div>
+              <h3>Ana Cárdenas</h3>
+              <span>Gestora municipal</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonio-card">
+          <div class="testimonio-card__stars">★★★★★</div>
+          <p class="testimonio-card__quote">“La experiencia es intuitiva, visual y realmente útil. Me siento parte de una solución más grande para el cuidado del medio ambiente.”</p>
+          <div class="testimonio-card__person">
+            <div class="testimonio-card__avatar">DP</div>
+            <div>
+              <h3>Diego Peña</h3>
+              <span>Reciclador y emprendedor</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="seccion-mapa" id="mapa-contenedores">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title"><strong>Contenedores inteligentes cerca de ti</strong></h2>
-        <p class="section-sub">Encuentra el contenedor más cercano con capacidad disponible en tiempo real.</p>
+        <h2 class="section-title"><strong>Mapa EcoSmart en tiempo real</strong></h2>
+        <p class="section-sub">Contenedores inteligentes y camiones recolectores actualizándose en vivo sobre el distrito.</p>
       </div>
-      <div class="mapa__scroll">
-        <div class="mapa__wrapper">
-          <div class="mapa__pin" style="top:32%;left:38%;">
-            <span class="mapa__pin-icon mapa__pin-icon--disponible">📍</span>
-            <div class="mapa__tooltip">
-              <strong>Cont. Ca.Tomas E.</strong>
-              <span>Plástico / Vidrio</span>
-              <span class="mapa__nivel">Llenado: 42%</span>
-            </div>
-          </div>
-          <div class="mapa__pin" style="top:45%;left:52%;">
-            <span class="mapa__pin-icon mapa__pin-icon--medio">📍</span>
-            <div class="mapa__tooltip">
-              <strong>Cont. Guillermo Marconi</strong>
-              <span>Papel / Cartón</span>
-              <span class="mapa__nivel mapa__nivel--alto">Llenado: 78%</span>
-            </div>
-          </div>
-          <div class="mapa__pin" style="top:55%;left:44%;">
-            <span class="mapa__pin-icon mapa__pin-icon--lleno">📍</span>
-            <div class="mapa__tooltip">
-              <strong>Cont. Av. Dos de Mayo(1)</strong>
-              <span>Orgánicos</span>
-              <span class="mapa__nivel mapa__nivel--critico">Llenado: 91% — Casi lleno</span>
-            </div>
-          </div>
-          <div class="mapa__pin" style="top:28%;left:62%;">
-            <span class="mapa__pin-icon mapa__pin-icon--disponible">📍</span>
-            <div class="mapa__tooltip">
-              <strong>Cont. C. Barcelona</strong>
-              <span>General</span>
-              <span class="mapa__nivel">Llenado: 15%</span>
-            </div>
-          </div>
-          <div class="mapa__pin" style="top:62%;left:60%;">
-            <span class="mapa__pin-icon mapa__pin-icon--disponible">📍</span>
-            <div class="mapa__tooltip">
-              <strong>Cont. Av. Dos de Mayo(2)</strong>
-              <span>Electrónicos</span>
-              <span class="mapa__nivel">Llenado: 30%</span>
-            </div>
-          </div>
-          <div class="mapa__leyenda">
-            <span class="mapa__leyenda-item"><span class="dot dot--verde"></span>Disponible</span>
-            <span class="mapa__leyenda-item"><span class="dot dot--amarillo"></span>Llenado &gt;60%</span>
-            <span class="mapa__leyenda-item"><span class="dot dot--rojo"></span>Casi lleno</span>
-          </div>
+
+      <div class="mapa__filtros" role="group" aria-label="Filtrar elementos del mapa">
+        <button type="button" class="mapa__filtro-btn is-active" data-filtro="todos">Ver Todo</button>
+        <button type="button" class="mapa__filtro-btn" data-filtro="contenedor">Solo Contenedores</button>
+        <button type="button" class="mapa__filtro-btn" data-filtro="camion">Solo Camiones</button>
+      </div>
+
+      <div class="mapa__contenedor">
+        <div class="mapa__wrapper" id="mapaIot"></div>
+        <div class="mapa__leyenda">
+          <span class="mapa__leyenda-item"><span class="dot dot--verde"></span>Disponible</span>
+          <span class="mapa__leyenda-item"><span class="dot dot--amarillo"></span>Llenado &gt;60%</span>
+          <span class="mapa__leyenda-item"><span class="dot dot--rojo"></span>Casi lleno</span>
+          <span class="mapa__leyenda-item"><span class="dot dot--azul"></span>Camión en ruta</span>
         </div>
       </div>
     </div>
@@ -626,11 +721,8 @@
               </div>
             </a>
           </div>
-          <p class="seccion-descarga__note">También disponible como plataforma web. Sin instalación.</p>
         </div>
-        <div class="seccion-descarga__phone">
-          <img src="assets/images/phone-mockup 1.png" alt="App EcoSmart en móvil" class="seccion-descarga__phone-img" />
-        </div>
+      
 
       </div>
     </div>
@@ -718,6 +810,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 

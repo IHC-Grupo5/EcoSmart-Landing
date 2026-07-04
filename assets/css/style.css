@@ -658,6 +658,38 @@ ul {
 .seg-card--dark .seg-card__list li::before {
   color: var(--color-accent-700);
 }
+
+.seg-card__actions {
+  margin-top: var(--sp-3);
+}
+
+.seg-card__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background-color: var(--color-primary-900);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.seg-card__cta:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.seg-card__cta--dark {
+  background-color: var(--color-secondary-600);
+}
+
+.seg-card--dark .seg-card__cta {
+  background-color: var(--color-secondary-600);
+}
 .seccion-descarga {
   background: linear-gradient(
     to bottom,
@@ -1240,102 +1272,141 @@ ul {
   padding: var(--sp-10) 0;
 }
 
-.mapa__wrapper {
+.mapa__contenedor {
   position: relative;
+}
+
+.mapa__wrapper {
   border-radius: var(--radius-lg);
-  background-image: url(https://ihc-grupo5.github.io/EcoSmart-Landing/assets/images/mapa-lima.jpg);
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat;
   overflow: hidden;
   box-shadow: 0 4px 24px rgba(20, 90, 52, 0.1);
   border: 1px solid var(--color-primary-200);
   height: 420px;
+  min-height: 320px;
+  z-index: 1;
+  position: relative;
 }
 
-.mapa__img {
+.mapa__fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 24px;
+  text-align: center;
+  background: linear-gradient(135deg, #f6fcf8 0%, #e4f7eb 100%);
+  color: var(--color-primary-950);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* El mapa de Leaflet necesita que su contenedor tenga tamaño explícito */
+.leaflet-container {
+  height: 100%;
   width: 100%;
-  height: 420px;
-  object-fit: cover;
-  display: block;
+  font-family: var(--font-body);
+  background-color: var(--color-primary-100);
 }
 
-.mapa__pin {
-  position: absolute;
+/* ===== Filtros externos (US63 - Escenario 2) ===== */
+.mapa__filtros {
+  display: flex;
+  gap: var(--sp-2);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--sp-4);
+}
+
+.mapa__filtro-btn {
+  border: 1px solid var(--color-primary-300);
+  background-color: var(--color-white);
+  color: var(--color-primary-900);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
-.mapa__pin:hover .mapa__tooltip {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+.mapa__filtro-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(20, 90, 52, 0.15);
 }
 
-.mapa__pin-icon {
-  font-size: 28px;
-  display: block;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-  transition: transform 0.2s;
-}
-
-.mapa__pin:hover .mapa__pin-icon {
-  transform: scale(1.2);
-}
-
-.mapa__pin-icon--disponible {
-  filter: drop-shadow(0 2px 6px rgba(76, 175, 80, 0.6));
-}
-.mapa__pin-icon--medio {
-  filter: drop-shadow(0 2px 6px rgba(255, 152, 0, 0.6));
-}
-.mapa__pin-icon--lleno {
-  filter: drop-shadow(0 2px 6px rgba(244, 67, 54, 0.6));
-}
-
-.mapa__tooltip {
-  position: absolute;
-  bottom: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%) translateY(6px);
-  background-color: var(--color-primary-950);
+.mapa__filtro-btn.is-active {
+  background-color: var(--color-primary-700, #1b5e20);
+  border-color: transparent;
   color: var(--color-white);
-  border-radius: var(--radius-md);
-  padding: var(--sp-2) var(--sp-3);
-  min-width: 180px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  visibility: hidden;
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s ease,
-    visibility 0.2s;
-  z-index: 10;
-  pointer-events: none;
 }
 
-.mapa__tooltip strong {
+/* ===== Marcadores dinámicos con Leaflet (divIcon) ===== */
+.mapa-marker-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease;
+}
+
+.mapa-marker-icon span {
+  transform: rotate(45deg);
+  font-size: 15px;
+  line-height: 1;
+}
+
+.mapa-marker-icon--disponible {
+  background-color: #4caf50;
+}
+.mapa-marker-icon--medio {
+  background-color: #ff9800;
+}
+.mapa-marker-icon--lleno {
+  background-color: #f44336;
+}
+
+/* El ícono de camión no usa la forma de gota, se mantiene circular y no rota con el mapa */
+.mapa-marker-icon--camion {
+  border-radius: 50%;
+  transform: none;
+  background-color: #2196f3;
+}
+.mapa-marker-icon--camion span {
+  transform: none;
+  font-size: 16px;
+}
+
+/* ===== Popup al hacer click (US63 - Escenario 1), contenido dentro del popup nativo de Leaflet ===== */
+.mapa-popup strong {
   display: block;
   font-family: var(--font-heading);
   font-size: 13px;
   margin-bottom: 4px;
+  color: var(--color-primary-950);
 }
 
-.mapa__tooltip span {
+.mapa-popup span {
   display: block;
   font-family: var(--font-body);
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-primary-800, #33513e);
 }
 
-.mapa__nivel {
-  color: rgba(255, 255, 255, 0.9) !important;
+.mapa-popup__nivel {
   margin-top: 4px;
+  font-weight: 600;
 }
-.mapa__nivel--alto {
-  color: #ffb74d !important;
+.mapa-popup__nivel--alto {
+  color: #e65100 !important;
 }
-.mapa__nivel--critico {
-  color: #ef9a9a !important;
+.mapa-popup__nivel--critico {
+  color: #c62828 !important;
 }
 
 .mapa__leyenda {
@@ -1348,6 +1419,8 @@ ul {
   display: flex;
   gap: var(--sp-3);
   backdrop-filter: blur(4px);
+  z-index: 500;
+  pointer-events: none;
 }
 
 .mapa__leyenda-item {
@@ -1375,21 +1448,236 @@ ul {
 .dot--rojo {
   background-color: #f44336;
 }
-.mapa-scroll {
-  width: 100%;
+.dot--azul {
+  background-color: #2196f3;
 }
-@media (max-width: 960px) {
-  .mapa__scroll {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
 
+@media (max-width: 960px) {
   .mapa__wrapper {
-    width: 1110px;
+    height: 320px;
   }
   .mapa__leyenda {
     flex-direction: column;
     gap: var(--sp-1);
+  }
+}
+
+.seccion-video-demo {
+  background: linear-gradient(135deg, var(--color-primary-100) 0%, var(--color-white) 100%);
+  padding: var(--sp-10) 0;
+}
+
+.video-demo__card {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--sp-4);
+  background-color: var(--color-white);
+  padding: var(--sp-4);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  align-items: center;
+}
+
+.video-demo__media {
+  min-height: 320px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-primary-950) 0%, var(--color-primary-700) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-demo__placeholder {
+  text-align: center;
+  color: var(--color-white);
+  padding: var(--sp-4);
+  max-width: 360px;
+}
+
+.video-demo__icon {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  margin: 0 auto var(--sp-2);
+}
+
+.video-demo__placeholder p {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: var(--sp-1);
+}
+
+.video-demo__placeholder span {
+  display: block;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.92;
+}
+
+.video-demo__content h3 {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--color-primary-950);
+  margin-bottom: var(--sp-2);
+}
+
+.video-demo__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-3);
+}
+
+.video-demo__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--color-light-neutral);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.video-demo__list li::before {
+  content: "✓";
+  color: var(--color-primary-700);
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+.video-demo__badge {
+  background-color: var(--verde-claro, #e2f0d9);
+  color: var(--verde-oscuro, #2e5624);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.video-demo__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 1.25rem;
+}
+
+.video-demo__list-icon {
+  background: #f0f4f1;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.video-demo__list p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 2px 0 0 0;
+}
+
+.video-demo__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .video-demo__card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .video-demo__media {
+    min-height: 240px;
+  }
+
+  .video-demo__content h3 {
+    font-size: 20px;
+  }
+}
+
+.seccion-testimonios {
+  background-color: var(--color-white);
+  padding: var(--sp-10) 0;
+}
+
+.testimonios__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-3);
+}
+
+.testimonio-card {
+  background: linear-gradient(135deg, #f9fdfb 0%, #eefbf3 100%);
+  border: 1px solid var(--color-primary-200);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-3);
+  box-shadow: var(--shadow-card);
+}
+
+.testimonio-card__stars {
+  color: var(--color-accent-600);
+  letter-spacing: 2px;
+  margin-bottom: var(--sp-2);
+  font-size: 14px;
+}
+
+.testimonio-card__quote {
+  color: var(--color-light-neutral);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: var(--sp-3);
+}
+
+.testimonio-card__person {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.testimonio-card__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary-700), var(--color-secondary-500));
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.testimonio-card__person h3 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  color: var(--color-primary-950);
+  margin-bottom: 2px;
+}
+
+.testimonio-card__person span {
+  font-size: 13px;
+  color: var(--color-dark-neutral);
+}
+
+@media (max-width: 960px) {
+  .testimonios__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .testimonios__grid {
+    grid-template-columns: 1fr;
   }
 }
 
