@@ -266,12 +266,6 @@
 
 })();
 
-/* =========================================================
-   US63 - Simulación Interactiva del Mapa IoT en el Landing
-   Implementado con Leaflet + OpenStreetMap: mapa navegable
-   real (arrastrar, hacer zoom, doble click), igual que
-   Google Maps pero sin API key ni facturación.
-   ========================================================= */
 (function () {
     var contenedorMapa = document.getElementById('mapaIot');
     if (!contenedorMapa) return;
@@ -281,12 +275,12 @@
         return;
     }
 
-    // Centro del distrito (ajusta estas coordenadas a tu zona real)
+    // Centro del distrito 
     var CENTRO = [-12.0464, -77.0428]; // Lima, Perú
     var ZOOM_INICIAL = 15;
 
     var map = L.map('mapaIot', {
-        scrollWheelZoom: false, // evita que la página "atrape" el scroll del mouse
+        scrollWheelZoom: false, 
         zoomControl: true
     }).setView(CENTRO, ZOOM_INICIAL);
 
@@ -298,7 +292,6 @@
         map.invalidateSize();
     });
 
-    // El usuario puede activar el zoom con rueda haciendo click primero (mejor UX en landing pages)
     map.on('click', function () { map.scrollWheelZoom.enable(); });
     map.on('mouseout', function () { map.scrollWheelZoom.disable(); });
 
@@ -307,7 +300,7 @@
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
-    // --- Datos simulados de contenedores inteligentes (lat/lng reales) ---
+    // --- Datos simulados de contenedores inteligentes
     var contenedoresData = [
         { lat: -12.0445, lng: -77.0440, nombre: 'Cont. Ca. Tomás E.', categoria: 'Plástico / Vidrio', nivel: 42 },
         { lat: -12.0470, lng: -77.0410, nombre: 'Cont. Guillermo Marconi', categoria: 'Papel / Cartón', nivel: 78 },
@@ -316,7 +309,7 @@
         { lat: -12.0490, lng: -77.0400, nombre: 'Cont. Av. Dos de Mayo (2)', categoria: 'Electrónicos', nivel: 30 }
     ];
 
-    // --- Rutas simuladas de camiones recolectores (waypoints lat/lng) ---
+    // --- Rutas simuladas de camiones recolectores 
     var camionesData = [
         {
             nombre: 'Camión 01',
@@ -373,7 +366,6 @@
         marker.addTo(capaContenedores);
     });
 
-    // Mueve un marcador de camión de forma continua a lo largo de su ruta (pan/zoom del usuario no lo interrumpe)
     function animarCamion(marker, ruta, duracionSegmento) {
         var indice = 0;
 
@@ -412,7 +404,6 @@
         animarCamion(marker, t.ruta, t.duracionSegmento);
     });
 
-    // --- Filtros externos: "Ver Todo" / "Solo Contenedores" / "Solo Camiones" ---
     var filtroBtns = document.querySelectorAll('.mapa__filtro-btn');
     filtroBtns.forEach(function (btn) {
         btn.addEventListener('click', function () {
