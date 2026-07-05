@@ -28,7 +28,7 @@
           <li><a href="#caracteristicas" class="navbar__link">Características</a></li>
           <li><a href="#para-quien" class="navbar__link">¿Para quién?</a></li>
           <li><a href="#descargar" class="navbar__link">Descargar</a></li>
-          <li><a href="faq.html#contacto" class="navbar__link">Contacto</a></li>
+          <li><a href="faq.html" class="navbar__link">FAQ</a></li>
         </ul>
       </nav>
       <div class="navbar__actions">
@@ -47,7 +47,7 @@
         <li><a href="#caracteristicas" class="navbar__mobile-link">Características</a></li>
         <li><a href="#para-quien" class="navbar__mobile-link">¿Para quién?</a></li>
         <li><a href="#descargar" class="navbar__mobile-link">Descargar</a></li>
-        <li><a href="faq.html#contacto" class="navbar__mobile-link">Contacto</a></li>
+        <li><a href="faq.html" class="navbar__mobile-link">FAQ</a></li>
       </ul>
       <div class="navbar__mobile-actions">
         <a href="municipal-login.html" class="btn btn--login btn--full">Iniciar sesión</a>
@@ -437,44 +437,49 @@
           hábitos de reciclaje diario en impacto real.</p>
       </div>
 
-      <div class="video-demo__card">
-        <div class="video-demo__media">
-          <iframe src="https://www.youtube.com/embed/uqqDI3EqvRY" 
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen loading="lazy">
-          </iframe>
-        </div>
-        <div class="video-demo__content">
-          <span class="video-demo__badge">Experiencia Mobile</span>
-          <h3>Tu tacho inteligente, ahora en tu bolsillo</h3>
-          <p class="video-demo__description">
-            Nuestra aplicación móvil combina herramientas avanzadas para que reciclar sea un proceso intuitivo,
-            transparente y sumamente gratificante.
-          </p>
+    <div class="video-demo__card">
+      <!-- LADO IZQUIERDO: VIDEO -->
+      <div class="video-demo__media" aria-label="Reproducir video demostrativo de EcoSmart">
+        <iframe
+          class="video-demo__iframe"
+          src="https://www.youtube.com/embed/toO0oJnqNgc"
+          title="Video demo de EcoSmart"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
 
-          <ul class="video-demo__list">
-            <li>
-              <div>
-                <strong>Reconocimiento con IA:</strong>
-                <p>Escanea cualquier residuo con tu cámara y descubre al instante cómo clasificarlo correctamente.</p>
-              </div>
-            </li>
-            <li>
-
-              <div>
-                <strong>Rutas y Contenedores IoT:</strong>
-                <p>Encuentra los puntos de acopio más cercanos y verifica su estado de llenado en tiempo real.</p>
-              </div>
-            </li>
-            <li>
-
-              <div>
-                <strong>Ecosistema de Recompensas:</strong>
-                <p>Deposita tus residuos reciclables, acumula EcoCoins automáticamente y canjéalas por beneficios
-                  locales.</p>
-              </div>
-            </li>
-          </ul>
+      <!-- LADO DERECHO: CONTENIDO PROFESIONAL -->
+      <div class="video-demo__content">
+        <span class="video-demo__badge">Experiencia Mobile</span>
+        <h3>Tu tacho inteligente, ahora en tu bolsillo</h3>
+        <p class="video-demo__description">
+          Nuestra aplicación móvil combina herramientas avanzadas para que reciclar sea un proceso intuitivo, transparente y sumamente gratificante.
+        </p>
+        
+        <ul class="video-demo__list">
+          <li>
+            <div class="video-demo__list-icon"></div>
+            <div>
+              <strong>Reconocimiento con IA:</strong>
+              <p>Escanea cualquier residuo con tu cámara y descubre al instante cómo clasificarlo correctamente.</p>
+            </div>
+          </li>
+          <li>
+            <div class="video-demo__list-icon"></div>
+            <div>
+              <strong>Rutas y Contenedores IoT:</strong>
+              <p>Encuentra los puntos de acopio más cercanos y verifica su estado de llenado en tiempo real.</p>
+            </div>
+          </li>
+          <li>
+            <div class="video-demo__list-icon"></div>
+            <div>
+              <strong>Ecosistema de Recompensas:</strong>
+              <p>Deposita tus residuos reciclables, acumula EcoCoins automáticamente y canjéalas por beneficios locales.</p>
+            </div>
+          </li>
+        </ul>
 
           <div class="video-demo__actions">
             <a href="#descargar" class="btn btn--primary">Descargar la App</a>
@@ -655,7 +660,7 @@
   <section class="seccion-educacion" id="educacion">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title"><strong>Aprende a reciclar mejor</strong></h2>
+        <h2 class="section-title"><strong>Aprende a Reciclar</strong></h2>
         <p class="section-sub">Artículos, guías y consejos para convertirte en un experto del reciclaje sostenible.</p>
       </div>
       <div class="educacion__grid">
@@ -668,7 +673,7 @@
             <h3 class="edu-card__title">Los 5 tipos de residuos que debes conocer</h3>
             <p class="edu-card__desc">Aprende a diferenciar plásticos, vidrios, papel, orgánicos y residuos peligrosos
               para clasificarlos correctamente desde casa.</p>
-            <a href="faq.html" class="edu-card__link">Leer más →</a>
+            <a href="aprendizaje.html#guia-basica" class="edu-card__link">Leer más →</a>
           </div>
         </article>
         <article class="edu-card">
@@ -680,7 +685,7 @@
             <h3 class="edu-card__title">¿Qué es la economía circular y por qué importa?</h3>
             <p class="edu-card__desc">Descubre cómo el modelo circular reduce residuos al mínimo y cómo tus hábitos de
               reciclaje contribuyen a este sistema.</p>
-            <a href="faq.html" class="edu-card__link">Leer más →</a>
+            <a href="aprendizaje.html#economia-circular" class="edu-card__link">Leer más →</a>
           </div>
         </article>
         <article class="edu-card">
@@ -692,7 +697,7 @@
             <h3 class="edu-card__title">Cómo disponer correctamente de residuos peligrosos</h3>
             <p class="edu-card__desc">Pilas, medicamentos y electrónicos necesitan un tratamiento especial. Te
               explicamos dónde y cómo desecharlos de forma segura.</p>
-            <a href="faq.html" class="edu-card__link">Leer más →</a>
+            <a href="aprendizaje.html#residuos-peligrosos" class="edu-card__link">Leer más →</a>
           </div>
         </article>
       </div>
@@ -729,11 +734,12 @@
             </a>
           </div>
         </div>
-        <div class="seccion-descarga__phone">
-          <img src="assets/images/phone-mockup-1.png" class="seccion-descarga__phone-img" />
 
+        <div class="seccion-descarga__media">
+          <div class="seccion-descarga__phone-img">
+            <img src="assets/images/img-AppEcoSmart.png" alt="Aplicación EcoSmart">
+          </div>
         </div>
-
       </div>
     </div>
   </section>
