@@ -28,7 +28,7 @@
           <li><a href="#caracteristicas" class="navbar__link">Características</a></li>
           <li><a href="#para-quien" class="navbar__link">¿Para quién?</a></li>
           <li><a href="#descargar" class="navbar__link">Descargar</a></li>
-          <li><a href="faq.html#contacto" class="navbar__link">Contacto</a></li>
+          <li><a href="faq.html" class="navbar__link">FAQ</a></li>
         </ul>
       </nav>
       <div class="navbar__actions">
@@ -47,7 +47,7 @@
         <li><a href="#caracteristicas" class="navbar__mobile-link">Características</a></li>
         <li><a href="#para-quien" class="navbar__mobile-link">¿Para quién?</a></li>
         <li><a href="#descargar" class="navbar__mobile-link">Descargar</a></li>
-        <li><a href="faq.html#contacto" class="navbar__mobile-link">Contacto</a></li>
+        <li><a href="faq.html" class="navbar__mobile-link">FAQ</a></li>
       </ul>
       <div class="navbar__mobile-actions">
         <a href="municipal-login.html" class="btn btn--login btn--full">Iniciar sesión</a>
@@ -436,11 +436,13 @@
     <div class="video-demo__card">
       <!-- LADO IZQUIERDO: VIDEO -->
       <div class="video-demo__media" aria-label="Reproducir video demostrativo de EcoSmart">
-        <div class="video-demo__placeholder">
-          <div class="video-demo__icon">▶</div>
-          <p>VIDEO DEMO</p>
-          <span>Reemplaza este bloque con tu enlace o archivo de video para mostrar la experiencia completa.</span>
-        </div>
+        <iframe
+          class="video-demo__iframe"
+          src="https://www.youtube.com/embed/toO0oJnqNgc"
+          title="Video demo de EcoSmart"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
 
       <!-- LADO DERECHO: CONTENIDO PROFESIONAL -->
@@ -661,7 +663,7 @@
             <h3 class="edu-card__title">Los 5 tipos de residuos que debes conocer</h3>
             <p class="edu-card__desc">Aprende a diferenciar plásticos, vidrios, papel, orgánicos y residuos peligrosos
               para clasificarlos correctamente desde casa.</p>
-            <a href="faq.html" class="edu-card__link">Leer más →</a>
+            <a href="aprendizaje.html#guia-basica" class="edu-card__link">Leer más →</a>
           </div>
         </article>
         <article class="edu-card">
@@ -673,7 +675,7 @@
             <h3 class="edu-card__title">¿Qué es la economía circular y por qué importa?</h3>
             <p class="edu-card__desc">Descubre cómo el modelo circular reduce residuos al mínimo y cómo tus hábitos de
               reciclaje contribuyen a este sistema.</p>
-            <a href="faq.html" class="edu-card__link">Leer más →</a>
+            <a href="aprendizaje.html#economia-circular" class="edu-card__link">Leer más →</a>
           </div>
         </article>
         <article class="edu-card">
@@ -685,7 +687,7 @@
             <h3 class="edu-card__title">Cómo disponer correctamente de residuos peligrosos</h3>
             <p class="edu-card__desc">Pilas, medicamentos y electrónicos necesitan un tratamiento especial. Te
               explicamos dónde y cómo desecharlos de forma segura.</p>
-            <a href="faq.html" class="edu-card__link">Leer más →</a>
+            <a href="aprendizaje.html#residuos-peligrosos" class="edu-card__link">Leer más →</a>
           </div>
         </article>
       </div>
