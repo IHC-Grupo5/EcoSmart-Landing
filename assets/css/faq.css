@@ -285,6 +285,86 @@
   line-height: 1.7;
 }
 
+/* ==========================================================================
+   FAQ Search Bar & No Results Styles
+   ========================================================================== */
+
+.faq__search-container {
+  max-width: 600px;
+  margin: 0 auto var(--sp-6) auto;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.faq__search-container:hover {
+  transform: translateY(-2px);
+}
+
+.faq__search-input {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-text);
+  background-color: var(--color-white);
+  border: 2px solid var(--color-primary-300);
+  border-radius: var(--radius-md);
+  padding: 14px 18px 14px 48px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(20, 90, 52, 0.05);
+}
+
+.faq__search-input:focus {
+  border-color: var(--color-primary-700);
+  box-shadow: 0 0 0 4px rgba(36, 158, 94, 0.15), 0 4px 12px rgba(20, 90, 52, 0.08);
+}
+
+.faq__search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: var(--color-primary-700);
+  pointer-events: none;
+  transition: color 0.25s ease;
+}
+
+.faq__search-input:focus + .faq__search-icon {
+  color: var(--color-primary-900);
+}
+
+.faq__no-results {
+  text-align: center;
+  padding: var(--sp-8) var(--sp-4);
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-primary-200);
+  border-radius: var(--radius-lg);
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-card);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.faq__no-results-icon {
+  font-size: 40px;
+  display: block;
+  margin-bottom: var(--sp-2);
+}
+
+.faq__no-results p {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--color-light-neutral);
+  margin: 0;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @media (max-width: 960px) {
   .faq-hero__inner  { flex-direction: column; align-items: flex-start; }
   .faq-hero__title  { font-size: 32px; }

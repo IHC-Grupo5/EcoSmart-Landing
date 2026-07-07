@@ -66,6 +66,24 @@
 
   <section class="seccion-faq" id="faq">
     <div class="container">
+      <!-- Buscador de FAQ -->
+      <div class="faq__search-container">
+        <span class="faq__search-icon">🔍</span>
+        <input 
+          type="text" 
+          id="faqSearchInput" 
+          class="faq__search-input" 
+          placeholder="Buscar preguntas frecuentes..." 
+          aria-label="Buscar preguntas frecuentes" 
+        />
+      </div>
+
+      <!-- Mensaje de no resultados -->
+      <div class="faq__no-results" id="faqNoResults" style="display: none;">
+        <span class="faq__no-results-icon">🔍</span>
+        <p>No se encontraron preguntas frecuentes que coincidan con tu búsqueda.</p>
+      </div>
+
       <div class="faq__grid">
 
         <div class="faq__col">
