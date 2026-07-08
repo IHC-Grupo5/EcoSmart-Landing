@@ -18,7 +18,8 @@
         'auth.js',
         'scanner.js',
         'counters.js',
-        'map.js'
+        'map.js',
+        'usuarios.js'
     ];
 
     modules.forEach(function (moduleName) {

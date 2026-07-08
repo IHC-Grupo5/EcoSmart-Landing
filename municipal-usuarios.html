@@ -183,24 +183,26 @@
         <div class="dash-card">
           <h2 class="dash-settings-card__title">Equipo municipal</h2>
 
-          <div class="dash-team-member">
-            <span class="dash-team-member__name">Juan Rodríguez</span>
-            <span class="dash-team-member__role">Administrador principal / Acceso total</span>
-          </div>
+          <div id="team-members-list">
+            <div class="dash-team-member">
+              <span class="dash-team-member__name">Juan Rodríguez</span>
+              <span class="dash-team-member__role">Administrador principal / Acceso total</span>
+            </div>
 
-          <div class="dash-team-member">
-            <span class="dash-team-member__name">María Llanos</span>
-            <span class="dash-team-member__role">Supervisora — Zona 1, 2, 3</span>
-          </div>
+            <div class="dash-team-member">
+              <span class="dash-team-member__name">María Llanos</span>
+              <span class="dash-team-member__role">Supervisora — Zona 1, 2, 3</span>
+            </div>
 
-          <div class="dash-team-member">
-            <span class="dash-team-member__name">Carlos Mamani</span>
-            <span class="dash-team-member__role">Operario — Zona norte</span>
-          </div>
+            <div class="dash-team-member">
+              <span class="dash-team-member__name">Carlos Mamani</span>
+              <span class="dash-team-member__role">Operario — Zona norte</span>
+            </div>
 
-          <div class="dash-team-member dash-team-member--inactive">
-            <span class="dash-team-member__name">Pedro Gutiérrez</span>
-            <span class="dash-team-member__role">Cuenta desactivada</span>
+            <div class="dash-team-member dash-team-member--inactive">
+              <span class="dash-team-member__name">Pedro Gutiérrez</span>
+              <span class="dash-team-member__role">Cuenta desactivada</span>
+            </div>
           </div>
         </div>
 
@@ -237,15 +239,15 @@
           <h2 class="dash-settings-card__title">Resumen de roles</h2>
           <div class="dash-roles-grid">
             <div class="dash-role-badge">
-              <span class="dash-role-badge__num">1</span>
+              <span class="dash-role-badge__num" id="count-admin">1</span>
               <span class="dash-role-badge__label">Admin</span>
             </div>
             <div class="dash-role-badge">
-              <span class="dash-role-badge__num">1</span>
+              <span class="dash-role-badge__num" id="count-supervisor">1</span>
               <span class="dash-role-badge__label">Supervisor</span>
             </div>
             <div class="dash-role-badge">
-              <span class="dash-role-badge__num">1</span>
+              <span class="dash-role-badge__num" id="count-operarios">1</span>
               <span class="dash-role-badge__label">Operarios</span>
             </div>
           </div>
